@@ -1,0 +1,50 @@
+
+
+Pre-Modularization
+
+I'm going to break everything down into single file for during the core work, then separate them back into modules when the core is sufficient.
+
+
+=======================================
+
+
+* set up a notes category for body
+
+ - Bugger is the only thing using this right now - 1:22|10-7-13
+ 
+ ~ TODO
+
+ - displays FTP information
+ 
+ - Create a TODO listing slider
+
+ 
+ 
+* Create the global bug tracker that has been needing to exist for a while.
+
+== Bugger ==
+
+ ~ TODO
+
+ - right now inventory is set up, and bugger has space for extra databases, but not hooked up right now.
+ 
+ 
+ 
+* Start up a project queue
+ 
+== Project Queue ==
+
+Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
+
+
+
+* Create a login for this, otherwise it's really stupid to leave it online for too long.
+
+== Login ==
+
+username / password (*only me*)
+
+
+== Logger ==
+
+pull the inventory logger into global scope

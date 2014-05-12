@@ -1,0 +1,5 @@
+Well I'm obviously on to something here - what started off as a combination of projects, each with their own modular sections (fitting into landing zone), has grown into a personalized pipeline I'm going to call, at least for now, Pipe Dream.
+
+Launching Pipe Dream will prompt you to enter everything you'd need for the entire scope for the project - including specifics for bugger, jot, and queued
+
+Pipe Dream then sets up Queued to handle, and initiates Bugger and Jot to work with, this project.

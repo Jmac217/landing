@@ -1,0 +1,4 @@
+body{background-color:#111;}
+p{color:#888;}
+li{color:#555;}
+a{text-decoration:none}
