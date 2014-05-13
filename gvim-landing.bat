@@ -1,0 +1,1 @@
+gvim -S C:\xampp\htdocs\forked-landing\landing.vim

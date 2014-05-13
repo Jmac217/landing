@@ -68,7 +68,7 @@
 				
 			</div>
 			
-			<div id='page'>
+			<div id='pages'>
 			
 				<div id='header'>
 					<span id='time'><?php date_default_timezone_set("America/Chicago"); echo date("g:ia"); ?></span>
@@ -81,35 +81,58 @@
 				</div>
 				
 				<div id='body'>
-					<span id='marquee'><marquee><!-- Rss Stuff --></marquee></span>
-					
-					<div id='body_panel'>
-						<span id='body_panel_links_queued'>Queued</span>
-						<span id='body_panel_links_jot'>Jot</span>
-						<span id='body_panel_links_lucent'>Lucent</span>
-						<span id='body_panel_links_bugger'>Bugs</span>
+					<div class='home'>
+						<span id='marquee'><marquee><!-- Rss Stuff from "newsbeard" --></marquee></span>
+						
+						<div id='body_panel'>
+							<span id='body_panel_links_queued'>Queued</span>
+							<span id='body_panel_links_jot'>Jot</span>
+							<span id='body_panel_links_lucent'>Lucent</span>
+							<span id='body_panel_links_bugger'>Bugs</span>
+						</div>
+						
+						<!-- application panel -->
+						<!-- - pop this up a level, to be accessible from any of the pages -->
+						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
+						<div id='queued'><?php include 'php/queued.php'; ?></div>
+						<div id='lucent'><?php include 'php/lucent.php'; ?></div>
+						<div id='jot'><?php include 'php/jot.php'; ?></div>
 					</div>
 					
-					<div id='bugger'>
-						<?php include 'php/Bugger/php/bugger.php'; ?>
-						<!--* This is the location for the actual landing bugger - bugger's view *-->
+					<!-- application exchange -->
+					<div class='jot'></div>
+					<div class='queued'></div>
+					<div class='lucent'></div>
+					<div class='bugger'>
+						<div id='bugger_form'>
+							<div id='bugger_banner'>
+								<span id='bugger_banner_title'>Bugger</span>
+								<span id='bugger_banner_return'>Return to Landing</span>
+							</div>
+							<div id='bugger_body'>
+								<div id='bugger'>
+									<h3>Report A New Issue</h3>
+									<input type='text' id='bugger_name' value='Bug Name'></input><br />
+									<input type='text' id='bugger_status' value='Status'></input><br />
+									<input type='text' id='bugger_code' value='Error Code'></input><br />
+									<input type='text' id='bugger_description' value='Bug Description' class='grows'></input><br />
+									<input type='text' id='bugger_notes' value='Notes' class='grows'></input><br />
+									<select id='bugger_selection'>
+										<option>- Select Database -</option>
+										<option>Inventory</option>
+										<option>MLT</option>
+										<option>Codefront</option>
+										<option>Landing</option>
+									</select><br />
+									<input type='bugger_button' value='Send' id='send_report'/>
+								</div>
+							</div>
+							<div id='bugger_footer'><span id='bugger_footer_feedback'></span></div>
+						</div>
 					</div>
 					
-					<div id='queued'>
-						<?php include 'php/Queued/php/queued.php'; ?>
-					</div>
-					
-					<div id='lucent'>
-						<?php include 'php/lucent.php'; ?>
-					</div>
-					
-					<div id='jot'>
-						<?php include 'php/Jot/index.php'; ?>
-					</div>
 				</div>
-				
 			</div>
-			
 			<div id='footer'>
 				<span id='quick_links'>
 					<span class='gitlinks'>
@@ -117,7 +140,6 @@
 					</span>
 				</span>
 			</div>
-			
 		</div>
 		<script type='text/javascript' src='js/jquery.js'></script>
 		<script type='text/javascript' src='js/index.js'></script>

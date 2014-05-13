@@ -8,43 +8,63 @@ I'm going to break everything down into single file for during the core work, th
 =======================================
 
 
-* set up a notes category for body
+	* set up a notes category for body
 
- - Bugger is the only thing using this right now - 1:22|10-7-13
- 
- ~ TODO
+	 - Bugger is the only thing using this right now - 1:22|10-7-13
+	 
+	 ~ TODO
 
- - displays FTP information
- 
- - Create a TODO listing slider
+	 - displays FTP information
+	 
+	 - Create a TODO listing slider
 
- 
- 
-* Create the global bug tracker that has been needing to exist for a while.
+	 
+	 
+	* Create the global bug tracker that has been needing to exist for a while.
 
 == Bugger ==
 
- ~ TODO
+	 ~ TODO
 
- - right now inventory is set up, and bugger has space for extra databases, but not hooked up right now.
+	 - right now inventory is set up, and bugger has space for extra databases, but not hooked up right now.
+	 
+	 
+	 
+	* Start up a project queue
  
- 
- 
-* Start up a project queue
- 
-== Project Queue ==
+== Queued ==
 
-Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
+	This is my project queue
 
+	it will display each project in order of priority and also link to the todo page if necessary.
 
+	This will allow me to keep tabs on all current projects and select, and change, priority.
+	
 
-* Create a login for this, otherwise it's really stupid to leave it online for too long.
+	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
+
+	* Create a login for this, otherwise it's really stupid to leave it online for too long.
 
 == Login ==
 
-username / password (*only me*)
+	username / password (*only me*)
 
 
 == Logger ==
 
-pull the inventory logger into global scope
+	pull the inventory logger into global scope
+
+== Jot ==
+
+	This is a simple TODO note taking application.
+
+	Output is to plain text with my-type styling.
+
+	Results are HTML
+
+
+	Outline:
+
+	get todos per category - site specific todo list
+
+	add todo entries where necessary
