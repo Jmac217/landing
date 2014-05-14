@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/index.css' />
-		<link rel='shortcut icon' href='res/lz.png' />
+		<link rel='shortcut icon' href='res/pipe-blend.png' />
 		<title>Landing Zone</title>
 	</head>
 	<body>
@@ -10,7 +10,6 @@
 			<span id='title'><i>Landing Zone</i></span>
 			
 			<div id='panel'>
-			
 				<div id='webapps'>
 					<p class='title'>Webapps</p>
 					<ul>
@@ -34,7 +33,6 @@
 						</li>
 					<ul>
 				</div>
-				
 				<div id='modules'>
 					<p class='title'>Modules</p>
 					<ul>
@@ -52,11 +50,9 @@
 						</li>
 					<ul>
 				</div>
-				
 				<span id='scripts'>
 					<p class='title'><a href='script' class='headerLink'>Scripts<a></p>
 				</span>
-				
 				<div id='databases'>
 					<p class='title'>Databases</p>
 					<ul>
@@ -65,8 +61,8 @@
 						</li><!-- localhost will need to become a dropdown. Listing for  "Work" and "Home", maybe even "Other" that pops up with a IP entry field. Why? Why not. -->
 					</ul>
 				</div>
-				
 			</div>
+			<!-- /panel -->
 			
 			<div id='pages'>
 			

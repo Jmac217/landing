@@ -8,6 +8,12 @@ I'm going to break everything down into single file for during the core work, th
 =======================================
 
 
+Global Design Specs
+
+I want to slim down the #panel; maybe to half the width, but allow it to expand by clicking a button.
+- moving modules to fit in to the lengthened list
+
+
 	* set up a notes category for body
 
 	 - Bugger is the only thing using this right now - 1:22|10-7-13
