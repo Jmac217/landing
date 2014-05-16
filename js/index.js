@@ -1,27 +1,30 @@
 $(document).ready(function(){
 
-/** queued **/
+// queued
 	$('#body_panel_links_queued').click(function(){
 		$('#queued').css({'visibility':'visible'});
 			$('#lucent').css({'visibility':'hidden'});
-			$('#jot').css({'visibility':'hidden'});		
+			$('#jot').css({'visibility':'hidden'});
 			$('#bugger').css({'visibility':'hidden'});
 	});
-/** server info **/
+	
+// server info
 	$('#body_panel_links_lucent').click(function(){
 		$('#lucid').css({'visibility':'visible'});
 			$('#queued').css({'visibility':'hidden'});
-			$('#jot').css({'visibility':'hidden'});		
+			$('#jot').css({'visibility':'hidden'});
 			$('#bugger').css({'visibility':'hidden'});
 	});
-/** jot **/
+	
+// jot
 	$('#body_panel_links_jot').click(function(){
 		$('#jot').css({'visibility':'visible'});
 			$('#queued').css({'visibility':'hidden'});
 			$('#lucent').css({'visibility':'hidden'});
-			$('#bugger').css({'visibility':'hidden'});		
+			$('#bugger').css({'visibility':'hidden'});
 	});
-/** bugger **/
+	
+// bugger
 	$('#body_panel_links_bugger').click(function(){
 		$('#bugger').css({'visibility':'visible'});
 			$('#queued').css({'visibility':'hidden'});
@@ -43,13 +46,9 @@ $(document).ready(function(){
 		$(this).parent().siblings('.bug_notes').css({'visibility':'visible'});
 		$(this).parent().siblings('.bug_code').css({'visibility':'hidden'});
 	});
-});
-
-
 
 /* bugger */
-$(document).ready(function(){
-
+/*
 	$('#goback').click(function(){
 		document.location.href='http://localhost/';
 	});
@@ -69,14 +68,12 @@ $(document).ready(function(){
 	});
 	
 	$('#send_report').click(function(){
-	
 		var name = $('#name').val();
 		var status = $('#status').val();
 		var code = $('#code').val();
 		var description = $('#description').val();
 		var notes = $('#notes').val();
 		var select = $('#selection option:selected').text();
-		
 		if(select == '- Select Database -'){
 			$('#feedback').html('Select a Database');
 		}else if(select != 'Inventory'){
@@ -92,8 +89,6 @@ $(document).ready(function(){
 				}
 			});
 		}
-		
 	});
-	
+*/
 });
-/* bugger */

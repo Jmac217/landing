@@ -2,14 +2,15 @@ Workflow: Prototyping
 
 With the ever-increasing scope of projects, I feel I should take some time to revise the to-do pipeline.
 
-Everything starts with the todo list, but until now I've just grabbed randomly from the list and set out to build whatever is required; however this is proving inefficient. It disables me from continuation when not knowing where to start.
+Everything starts with the todo list, but until now I've just grabbed randomly from the list and set out to build whatever is required; however this is proving inefficient.
+It disables me from continuation when not knowing where to start.
 
 I'm proposing a new method for keeping tabs, and maybe finally building out my application pipeline: Jot>Queued|Lucent<Bugs=> "Pipedream", or possibly "Cubed"
 
 ---
 
 From the idea stage, todo, a thought must be built out into a set of tasks working to complete a realized goal.
-In the todo stage, this goal must be thought out otherwise the scope can easily encumber the workload or overlap into another task, which can cause backtracking.
+In the todo stage, this goal must be thought out; otherwise the scope can easily encumber the workload or overlap into another task's scope, which can cause backtracking and/or rewriting blocks and functions.
 Tasks will be handed nested priorities based on: 'problem_type', 'importance', 'difficulty', and a dictionary will be maintained for potential future criteria.
 A tasker, Queued, will be called upon to display the tasks based on the criteria in order of previous appearance and subsidiary information, whether that be of "code" or "visual" type, "high" or "low" priority, or a "hard" or "average" difficulty.
 These types will also need to be allowed for commenting; this is where the note taking module, Jot, comes into play.

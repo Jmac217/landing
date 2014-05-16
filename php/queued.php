@@ -21,12 +21,12 @@ $i = $startingRow;
 $t = $startingRow;
 
 // functions
-/*
+
 function setTop($i, $height){
 	$height = $height+1;// plus 1 for border
 	return $top = ($i * $height) - $height.'px'; // minus height to start from 0px
 }
-*/
+
 
 // nothing to display
 if ($rows == 0){

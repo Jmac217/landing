@@ -50,62 +50,60 @@ a:hover{color:#222;text-decoration:none;cursor:pointer;}
 			#default{position:absolute;top:20px;left:35%;}
 
 			#body_panel{position:absolute;top:10px;right:10px;height:93%;width:17%;border:solid 1px #AAA;}
-				#body_panel_links_queued{position:absolute;top:25px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}
-				#body_panel_links_queued:hover{color:#777;}
-				#body_panel_links_jot{position:absolute;top:75px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}
-				#body_panel_links_jot:hover{color:#777;}
-				#body_panel_links_lucent{position:absolute;top:125px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}
-				#body_panel_links_lucent:hover{color:#777;}
-				#body_panel_links_bugger{position:absolute;top:175px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}
-				#body_panel_links_bugger:hover{color:#777;}
+				#body_panel_links_queued{position:absolute;top:25px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_queued:hover{color:#777;}
+				#body_panel_links_jot{position:absolute;top:75px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_jot:hover{color:#777;}
+				#body_panel_links_lucent{position:absolute;top:125px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_lucent:hover{color:#777;}
+				#body_panel_links_bugger{position:absolute;top:175px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_bugger:hover{color:#777;}
 
 			#marquee{position:absolute;top:2px;left:2px;width:393px;height:20px;color:#555;}
 
-			#queued{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;visibility:visibile;}
-				.project{position:absolute;left:0xp;width:100%;}
-					.project_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
-					.project_priority{position:absolute;height:20px;width:20%;right:20%;background-color:#aaa;}
-					.project_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
-					.project_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
-						.project_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
-						.project_description{position:absolute;height:40px;width:100%;top:20px;left:0px;background-color:#bbb;overflow:hidden;}
-						.project_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-						.project_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-					.project_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
-					
-			#jot{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;visibility:hidden;}
-				.note{position:absolute;left:0xp;width:100%;}
-					.note_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
-					.note_priority{position:absolute;height:20px;width:20%;right:20%;background-color:#aaa;}
-					.note_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
-					.note_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
-						.note_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
-						.note_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
-						.note_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-						.note_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-					.note_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
+			#home{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;}
 
-			#lucent{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;visibility:hidden;}
-				.server{position:absolute;left:0xp;width:100%;}
-					.server_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
-					.server_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
-					.server_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
-						.server_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
-						.server_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
-						.server_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-						.server_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-					.server_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}		
-					
-			#bugger{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;visibility:hidden;}
-				.bug{position:absolute;left:0xp;width:100%;}
-					.bug_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
-					.bug_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
-					.bug_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
-						.bug_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
-						.bug_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
-						.bug_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-						.bug_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-					.bug_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
+				#queued{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:visible;}
+					.project{position:absolute;left:0px;width:100%;}
+						.project_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
+						.project_priority{position:absolute;height:20px;width:20%;right:20%;background-color:#aaa;}
+						.project_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
+						.project_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
+							.project_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
+							.project_description{position:absolute;height:40px;width:100%;top:20px;left:0px;background-color:#bbb;overflow:hidden;}
+							.project_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+							.project_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+						.project_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
+						
+				#jot{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
+					.note{position:absolute;left:0px;width:100%;}
+						.note_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
+						.note_priority{position:absolute;height:20px;width:20%;right:20%;background-color:#aaa;}
+						.note_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
+						.note_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
+							.note_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
+							.note_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
+							.note_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+							.note_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+						.note_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
+
+				#lucent{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
+					.server{position:absolute;left:0px;width:100%;}
+						.server_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
+						.server_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
+						.server_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
+							.server_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
+							.server_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
+							.server_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+							.server_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+						.server_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}		
+						
+				#bugger{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
+					.bug{position:absolute;left:0px;width:100%;}
+						.bug_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
+						.bug_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
+						.bug_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
+							.bug_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
+							.bug_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
+							.bug_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+							.bug_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
+						.bug_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
 
 	#footer{position:absolute;bottom:-34px;height:30px;width:100%;background-color:#016CA4;border-style:none;border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
 		#quick_links{position:absolute;top:5px;right:5px;font-size:20px;color:white;}

@@ -2,6 +2,8 @@
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/index.css' />
 		<link rel='shortcut icon' href='res/pipe-blend.png' />
+		<script type='text/javascript' src='js/jquery.js'></script>
+		<script type='text/javascript' src='js/index.js'></script>
 		<title>Landing Zone</title>
 	</head>
 	<body>
@@ -11,55 +13,16 @@
 			
 			<div id='panel'>
 				<div id='webapps'>
-					<p class='title'>Webapps</p>
-					<ul>
-						<li>
-								<a href='./inventory/'>Inventory</a>
-						</li>
-						<li>
-								<a href='./MLT/'>MLT</a>
-						</li>
-						<li>
-								<a href='./TBOC/'>TBOC</a>
-						</li>
-						<li>
-								<a href='./Codefront/photo'>Photo</a>
-						</li>
-						<li>
-								<a href='./eto-reworked'>Sundial</a>
-						</li>
-						<li>
-								<a href='http://localhost/Jmac217/Bocce'>Bocce</a>
-						</li>
-					<ul>
+					<?php include 'json/webapps.html'; ?>
 				</div>
 				<div id='modules'>
-					<p class='title'>Modules</p>
-					<ul>
-						<li>
-								<a href='./php/Queued/'>Queued</a>
-						</li>
-						<li>
-								<a href='./php/Jot/'>Jot</a>
-						</li>
-						<li>
-								<a href='./php/lucent.php'>Lucent</a>
-						</li>
-						<li>
-								<a href='./php/Bugger/'>Bugger</a>
-						</li>
-					<ul>
+					<?php include 'json/modules.html'; ?>
 				</div>
 				<span id='scripts'>
-					<p class='title'><a href='script' class='headerLink'>Scripts<a></p>
+					<?php include 'json/scripts.html'; ?>
 				</span>
 				<div id='databases'>
-					<p class='title'>Databases</p>
-					<ul>
-						<li>
-							<a href='./phpmyadmin/'>Localhost</a> / <a href=''>Ubuntu</a> / <a href=''>GoDaddy</a>
-						</li><!-- localhost will need to become a dropdown. Listing for  "Work" and "Home", maybe even "Other" that pops up with a IP entry field. Why? Why not. -->
-					</ul>
+					<?php include 'json/databases.html'; ?>
 				</div>
 			</div>
 			<!-- /panel -->
@@ -77,22 +40,22 @@
 				</div>
 				
 				<div id='body'>
-					<div class='home'>
+				
+					<div id='body_panel'>
+						<span id='body_panel_links_queued'>Queued</span>
+						<span id='body_panel_links_jot'>Jot</span>
+						<span id='body_panel_links_lucent'>Lucent</span>
+						<span id='body_panel_links_bugger'>Bugs</span>
+					</div>
+
+					<div id='home'>
 						<span id='marquee'><marquee><!-- Rss Stuff from "newsbeard" --></marquee></span>
-						
-						<div id='body_panel'>
-							<span id='body_panel_links_queued'>Queued</span>
-							<span id='body_panel_links_jot'>Jot</span>
-							<span id='body_panel_links_lucent'>Lucent</span>
-							<span id='body_panel_links_bugger'>Bugs</span>
-						</div>
-						
 						<!-- application panel -->
 						<!-- - pop this up a level, to be accessible from any of the pages -->
-						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
-						<div id='queued'><?php include 'php/queued.php'; ?></div>
-						<div id='lucent'><?php include 'php/lucent.php'; ?></div>
 						<div id='jot'><?php include 'php/jot.php'; ?></div>
+						<div id='queued'><?php include 'php/queued.php'; ?></div>
+						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
+						<div id='lucent'><?php include 'php/lucent.php'; ?></div>
 					</div>
 					
 					<!-- application exchange -->
@@ -137,7 +100,5 @@
 				</span>
 			</div>
 		</div>
-		<script type='text/javascript' src='js/jquery.js'></script>
-		<script type='text/javascript' src='js/index.js'></script>
 	</body>
 </html>

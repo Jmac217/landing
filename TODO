@@ -13,6 +13,10 @@ Global Design Specs
 I want to slim down the #panel; maybe to half the width, but allow it to expand by clicking a button.
 - moving modules to fit in to the lengthened list
 
+To make things less static, it would be a good idea to generate listings with JSON -- Webapps, Modules, Scripts, and Databases and even Links Panel.
+- the idea is to let the parser be generic enough to handle each individually and separately
+! to start in this process I've moved each list to its own temporary html file within the json folder. This will help in determining the final result of each json file.
+
 
 	* set up a notes category for body
 
