@@ -1,10 +1,25 @@
 Landing Zone
 
-This is my project landing page. It is a work-in-progress, but I aim to bring everything to a centralized web-based work environment with this.
+This is my project landing page. It is a work-in-progress, and serves two purposes: I aim to bring everything to a centralized web-based work environment with this and generate simple TODO notes for applications.
 
-The platform will house a slew of modular applications such as: Bugger, Queued, Jot, Lucent
+I'm changing the names of things to feel less modular--Yes maybe it will be renamed and split up at a later point, but for now I think it makes sense to name it in order of use.
+"Start Project" > "Project Queue" > "Jot a Note" > "Bug Tracker" > "Server Status"
 
-How do the modules work?
+::Database structure:: (This should be entirely JSON based)
 
-All application are contained inside of their ./php/* folder and each has their own php folder containing a script called, for example, bugger.php.
-(//landing/php/Bugger/php/bugger.php)
+Project
+	ID
+	readme
+		body
+		edited
+			date
+			author
+	todo (jot)
+		ID
+		priority *manually set, but can also be set based on date*
+		type (idea, fix, bug, style, feature, ... <= `types.json`)
+		headline
+		[note]
+			body
+			date
+		submitted_date

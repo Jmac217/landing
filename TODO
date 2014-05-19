@@ -1,15 +1,3 @@
-
-
-Pre-Modularization
-
-I'm going to break everything down into single file for during the core work, then separate them back into modules when the core is sufficient.
-
-
-=======================================
-
-
-Global Design Specs
-
 I want to slim down the #panel; maybe to half the width, but allow it to expand by clicking a button.
 - moving modules to fit in to the lengthened list
 
@@ -17,64 +5,16 @@ To make things less static, it would be a good idea to generate listings with JS
 - the idea is to let the parser be generic enough to handle each individually and separately
 ! to start in this process I've moved each list to its own temporary html file within the json folder. This will help in determining the final result of each json file.
 
+Create the global note tracker based on Bugger
+- Rewrite for JSON and expand the fields to be more generic, and less modular.
 
-	* set up a notes category for body
+Add specialized fields to note queue?
+-	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
+* Create a login for this, otherwise it's really stupid to leave it online for too long.
 
-	 - Bugger is the only thing using this right now - 1:22|10-7-13
-	 
-	 ~ TODO
-
-	 - displays FTP information
-	 
-	 - Create a TODO listing slider
-
-	 
-	 
-	* Create the global bug tracker that has been needing to exist for a while.
-
-== Bugger ==
-
-	 ~ TODO
-
-	 - right now inventory is set up, and bugger has space for extra databases, but not hooked up right now.
-	 
-	 
-	 
-	* Start up a project queue
- 
-== Queued ==
-
-	This is my project queue
-
-	it will display each project in order of priority and also link to the todo page if necessary.
-
-	This will allow me to keep tabs on all current projects and select, and change, priority.
-	
-
-	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
-
-	* Create a login for this, otherwise it's really stupid to leave it online for too long.
-
-== Login ==
-
-	username / password (*only me*)
+Pull the inventory logger into global scope.
+- For modules add log.json with urls to specific logs to include, this allows for expansion as long as the logger is generic enough to handle everything.
+- Output is to plain text with my personal styling, so maybe write a schema for others to edit?
+-	Results are shown in either HTML or plain-text
 
 
-== Logger ==
-
-	pull the inventory logger into global scope
-
-== Jot ==
-
-	This is a simple TODO note taking application.
-
-	Output is to plain text with my-type styling.
-
-	Results are HTML
-
-
-	Outline:
-
-	get todos per category - site specific todo list
-
-	add todo entries where necessary
