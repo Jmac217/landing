@@ -17,4 +17,21 @@ Pull the inventory logger into global scope.
 - Output is to plain text with my personal styling, so maybe write a schema for others to edit?
 -	Results are shown in either HTML or plain-text
 
+::Database structure:: (This should be entirely JSON based)
 
+		Project
+			ID
+			readme
+				body
+				edited
+				date
+					author
+			todo (jot)
+				ID
+				priority *manually set, but can also be set based on date*
+				type (idea, fix, bug, style, feature, ... <= `types.json`)
+				headline
+				[note]
+					body
+					date
+				submitted_date
