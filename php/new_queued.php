@@ -1,23 +1,28 @@
-
-<!-- debug -->
-<!--
-<html>
-	<head>
-		<link rel='stylesheet' type='text/css' href='../../../css/index.css' />
-	</head>
-</html>
--->
-
 <?php
 
-//JSON rewrite
+echo "<link rel='stylesheet' href='../css/queued.css'/>";
 
-$JSON = json_decode(file_get_contents('json/databases.json', true));
+$startingRow = 1;
+
+// instantiate loop variables from $startingRow
+$i = $startingRow;
+$t = $startingRow;
+
+// functions
+
+function setTop($i, $height){
+	$height = $height+1;// plus 1 for border
+	return $top = ($i * $height) - $height.'px'; // minus height to start from 0px
+}
+
+$JSON = json_decode(file_get_contents('../json/databases.json', true));
 
 $project = $JSON->project[1];
 $readme = $project->readme[0];
 $todo = $project->todo[1];
 $notes = $todo->notes[0];
+
+echo "<div id='queued'>";
 
 echo $project->id;
 
@@ -36,30 +41,10 @@ echo "<br/>".$notes->date;
 
 echo "<br/>".$todo->date;
 
-
-// SQL Variation
-/*
-include 'connect.php';
-
-// variables
-$sql = 'SELECT * FROM queued';
-$query = mysql_query($sql)or die(mysql_error());
-$rows = mysql_num_rows($query);
-$startingRow = 1;
-
-// instantiate loop variables from $startingRow
-$i = $startingRow;
-$t = $startingRow;
-
-// functions
-
-function setTop($i, $height){
-	$height = $height+1;// plus 1 for border
-	return $top = ($i * $height) - $height.'px'; // minus height to start from 0px
-}
-
+echo "</div>";
 
 // nothing to display
+/*
 if ($rows == 0){
 	echo "
 		<span id='default'>You have no queued projects...</span>
@@ -94,6 +79,5 @@ if ($rows == 0){
 		}else{$i++;}
 	}
 }
- */
-// end SQL variation
+*/
 ?>

@@ -1,12 +1,22 @@
+priority => queue, jot, log, style, features
+
+queue
+-----
+come up with a simple layout for the queue view
+- Style is a minor necessity at this point; the idea is to display the 'project' page of priority in the view.
+! the layout needs to be defined before continuing
+
+
+rewrite queued.php to use JSON
+Create the global note tracker based on Bugger
+- Rewrite for JSON and expand the fields to be more generic, and less modular.
+
 I want to slim down the #panel; maybe to half the width, but allow it to expand by clicking a button.
 - moving modules to fit in to the lengthened list
 
 To make things less static, it would be a good idea to generate listings with JSON -- Webapps, Modules, Scripts, and Databases and even Links Panel.
 - the idea is to let the parser be generic enough to handle each individually and separately
 ! to start in this process I've moved each list to its own temporary html file within the json folder. This will help in determining the final result of each json file.
-
-Create the global note tracker based on Bugger
-- Rewrite for JSON and expand the fields to be more generic, and less modular.
 
 Add specialized fields to note queue?
 -	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes

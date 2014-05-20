@@ -16,3 +16,8 @@ A tasker, Queued, will be called upon to display the tasks based on the criteria
 These types will also need to be allowed for commenting; this is where the note taking module, Jot, comes into play.
 Jot will synchronise across the criteria and subsets of categories and allow for notes to be taken on every level. It will be up to Queued to take this information into account accordingly.
 
+---
+
+'Now that I've implemented the beginnings of JSON I feel I've opened up a broad multitude of directions and am feeling the way this project was supposed to prevent.'
+'I'm almost entirely finished with thinking about this project in terms of separate modules, that is entirely tedius and inefficient.'
+

@@ -42,10 +42,10 @@
 				<div id='body'>
 				
 					<div id='body_panel'>
-						<span id='body_panel_links_queued'>Queued</span>
-						<span id='body_panel_links_jot'>Jot</span>
-						<span id='body_panel_links_lucent'>Lucent</span>
-						<span id='body_panel_links_bugger'>Bugs</span>
+						<span id='body_panel_links_queued'>Project Queue</span>
+						<span id='body_panel_links_jot'>Add a Note</span>
+						<span id='body_panel_links_lucent'>Server Status</span>
+						<span id='body_panel_links_bugger'>Bug Tracker</span>
 					</div>
 
 					<div id='home'>
