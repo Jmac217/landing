@@ -1,0 +1,1 @@
+vim -S /srv/http/landing/landing.vim
