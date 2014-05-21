@@ -1,41 +1,66 @@
-
-<!-- debug -->
-<!--
-<html>
-	<head>
-		<link rel='stylesheet' type='text/css' href='../../../css/index.css' />
-	</head>
-</html>
--->
-
 <?php
 
 //JSON rewrite
+$JSON = json_decode(file_get_contents('json/database.json', true));
 
-$JSON = json_decode(file_get_contents('json/databases.json', true));
-
-$project = $JSON->project[1];
+$project = $JSON->project[0];
 $readme = $project->readme[0];
-$todo = $project->todo[1];
+$todo = $project->todo[0];
+$priority_index = $todo->priority_index[0];
 $notes = $todo->notes[0];
 
-echo $project->id;
-
-echo "<br/>".$readme->body;
-echo "<br/>".$readme->edited;
-echo "<br/>".$readme->date;
-echo "<br/>".$readme->author;
-
-echo "<br/>".$todo->id;
-echo "<br/>".$todo->priority;
-echo "<br/>".$todo->type;
-echo "<br/>".$todo->headline;
-
-echo "<br/>".$notes->body;
-echo "<br/>".$notes->date;
-
-echo "<br/>".$todo->date;
-
+echo "
+	<div id='tracker'>
+		<div id='tracker_header'>
+			<div id='tracker_header_name'>".$project->name."</div>
+			<div id='tracker_header_id'>Project Name: ".$project->id."</div>
+		</div>
+		<div id='tracker_body'>
+			<div id='tracker_body_collpased'>
+				<div id='tracker_list'>
+				
+					<!-- vv template for generated list vv -->
+					
+						<div class='tracker_list_item'>
+							<div class='tracker_li_name'></div>
+							<div class='tracker_li_type'></div>
+							<div class='tracker_li_priority'></div>
+							<div class='tracker_li_date'></div>
+						</div>
+						
+					<!-- ^^ template for generated list ^^ -->
+					
+				</div>
+			</div>
+			<div id='tracker_body_expanded'>
+				<div id='tracker_readme'>
+					<div id='tracker_readme_body'>".$readme->body."</div>
+					<div id='tracker_readme_edited'>".$readme->edited."</div>
+					<div id='tracker_readme_date'>".$readme->date."</div>
+					<div id='tracker_readme_author'>".$readme->author."</div>
+				</div>
+				<div id='tracker_todo'>
+					<div id='tracker_todo_id'>".$todo->id."</div>
+					<div id='tracker_todo_headline'>".$todo->headline."</div>
+					<div id='tracker_todo_date'>".$todo->date."</div>
+				</div>
+				<div id='tracker_priority_index'>
+					<div id='tracker_priority_index_type'>".$priority_index->type."</div>
+					<div id='tracker_priority_index_workload'>".$priority_index->workload."</div>
+					<div id='tracker_priority_index_importance'>".$priority_index->importance."</div>
+					<div id='tracker_priority_index_due_date'>".$priority_index->due_date."</div>
+				</div>
+				<div id='tracker_notes'>
+					<div id='tracker_notes_body>".$notes->body."</div>
+					<div id='tracker_notes_date>".$notes->date."</div>
+				</div>
+			</div>
+		</div>
+		<div id='tracker_footer'>
+			<!-- nothing so far -->
+		</div>
+	</div>
+";
 
 // SQL Variation
 /*

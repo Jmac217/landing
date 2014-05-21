@@ -1,7 +1,0 @@
-"id"
-"title"
-	[link]
-		"text"
-		"url"
-		"type"
-		"style"

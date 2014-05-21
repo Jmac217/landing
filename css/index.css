@@ -58,6 +58,31 @@ a:hover{color:#222;text-decoration:none;cursor:pointer;}
 			#marquee{position:absolute;top:2px;left:2px;width:393px;height:20px;color:#555;}
 
 			#home{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;}
+			
+				#tracker{position:absolute;top:0px;left:0px;height:519px;width:830px;}
+					#tracker_header{position:absolute;top:0px;left:0px;height:66px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+						#tracker_header_name{position:absolute;top:5px;left:10px;font-size:25px;}#tracker_header_name:hover{text-decoration:underline;cursor:pointer;}
+						#tracker_header_id{position:absolute;bottom:5px;left:10px;font-size:12px;}
+					#tracker_body{position:absolute;top:70px;height:412px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+						#tracker_body_expanded{}
+							#tracker_readme{}
+								#tracker_readme_body{}
+								#tracker_readme_edited{}
+								#tracker_readme_date{}
+								#tracker_readme_author{}
+							#tracker_todo{}
+								#tracker_todo_id{}
+								#tracker_todo_headline{}
+								#tracker_todo_date{}
+							#tracker_priority_index{}
+								#tracker_priority_index_type{}
+								#tracker_priority_index_workload{}
+								#tracker_priority_index_importance{}
+								#tracker_priority_index_due_date{}
+							#tracker_notes{}
+								#tracker_notes_body{}
+								#tracker_notes_date{}
+					#tracker_footer{position:absolute;bottom:0px;left:0px;height:33px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 
 				#queued{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:visible;}
 					.project{position:absolute;left:0px;width:100%;}

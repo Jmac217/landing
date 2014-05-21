@@ -1,0 +1,22 @@
+{
+	"queued":[{
+		"title":"Project Queue",
+		"action":"load",
+		"url":"php/queued.php"
+	}],
+	"jot":[{
+		"title":"Add a Note",
+		"action":"load",
+		"url":"php/jot.php"
+	}],
+	"lucent":[{
+		"title":"Server Status",
+		"action":"load",
+		"url":"php/lucent.php"
+	}],
+	"bugger":[{
+		"title":"Bug Tracker",
+		"action":"load",
+		"url":"php/bugger.php"
+	}]
+}

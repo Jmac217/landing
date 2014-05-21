@@ -11,13 +11,13 @@ I'm proposing a new method for keeping tabs, and maybe finally building out my a
 
 From the idea stage, todo, a thought must be built out into a set of tasks working to complete a realized goal.
 In the todo stage, this goal must be thought out; otherwise the scope can easily encumber the workload or overlap into another task's scope, which can cause backtracking and/or rewriting blocks and functions.
-Tasks will be handed nested priorities based on: 'problem_type', 'importance', 'difficulty', and a dictionary will be maintained for potential future criteria.
-A tasker, Queued, will be called upon to display the tasks based on the criteria in order of previous appearance and subsidiary information, whether that be of "code" or "visual" type, "high" or "low" priority, or a "hard" or "average" difficulty.
+Tasks will be handed nested priorities based on: 'type', 'importance', 'workload', and 'due_date'; and a dictionary will be maintained for potential future criteria selections.
+A tasker, Queued, will be called upon to display the tasks based on an index of the criteria in order of previous appearance and subsidiary information, being the mean value of integers assigned to the associated arrays, whether that be of "code" or "visual" type, "high" or "low" priority, or a "hard" or "average" difficulty.
 These types will also need to be allowed for commenting; this is where the note taking module, Jot, comes into play.
-Jot will synchronise across the criteria and subsets of categories and allow for notes to be taken on every level. It will be up to Queued to take this information into account accordingly.
+Jot will nest and synchronise across the criteria and subsets of categories and allow for notes to be taken on every level. It will be up to Queued to take this information into account accordingly.
 
 ---
 
 'Now that I've implemented the beginnings of JSON I feel I've opened up a broad multitude of directions and am feeling the way this project was supposed to prevent.'
-'I'm almost entirely finished with thinking about this project in terms of separate modules, that is entirely tedius and inefficient.'
+'I'm almost entirely finished with thinking about this project in terms of separate modules, that is entirely tedious and inefficient.'
 

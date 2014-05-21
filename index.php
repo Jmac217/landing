@@ -13,16 +13,55 @@
 			
 			<div id='panel'>
 				<div id='webapps'>
-					<?php include 'json/webapps.html'; ?>
+					<p class='title'>Webapps</p>
+					<ul>
+						<li>
+								<a href='./inventory/'>Inventory</a>
+						</li>
+						<li>
+								<a href='./MLT/'>MLT</a>
+						</li>
+						<li>
+								<a href='./TBOC/'>TBOC</a>
+						</li>
+						<li>
+								<a href='./Codefront/photo'>Photo</a>
+						</li>
+						<li>
+								<a href='./eto-reworked'>Sundial</a>
+						</li>
+						<li>
+								<a href='http://localhost/Jmac217/Bocce'>Bocce</a>
+						</li>
+					<ul>
 				</div>
 				<div id='modules'>
-					<?php include 'json/modules.html'; ?>
+					<p class='title'>Modules</p>
+					<ul>
+						<li>
+								<a href='./php/Queued/'>Queued</a>
+						</li>
+						<li>
+								<a href='./php/Jot/'>Jot</a>
+						</li>
+						<li>
+								<a href='./php/lucent.php'>Lucent</a>
+						</li>
+						<li>
+								<a href='./php/Bugger/'>Bugger</a>
+						</li>
+					<ul>
 				</div>
 				<span id='scripts'>
-					<?php include 'json/scripts.html'; ?>
+					<p class='title'><a href='script' class='headerLink'>Scripts<a></p>
 				</span>
 				<div id='databases'>
-					<?php include 'json/databases.html'; ?>
+					<p class='title'>Databases</p>
+					<ul>
+						<li>
+							<a href='./phpmyadmin/'>Localhost</a> / <a href=''>Ubuntu</a> / <a href=''>GoDaddy</a>
+						</li><!-- localhost will need to become a dropdown. Listing for  "Work" and "Home", maybe even "Other" that pops up with a IP entry field. Why? Why not. -->
+					</ul>
 				</div>
 			</div>
 			<!-- /panel -->
