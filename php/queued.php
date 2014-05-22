@@ -13,7 +13,7 @@ echo "
 	<div id='tracker'>
 		<div id='tracker_header'>
 			<div id='tracker_header_name'>".$project->name."</div>
-			<div id='tracker_header_id'>Project Name: ".$project->id."</div>
+			<div id='tracker_header_id'>Project ID: ".$project->id."</div>
 		</div>
 		<div id='tracker_body'>
 			<div id='tracker_body_collpased'>
@@ -34,25 +34,28 @@ echo "
 			</div>
 			<div id='tracker_body_expanded'>
 				<div id='tracker_readme'>
-					<div id='tracker_readme_body'>".$readme->body."</div>
-					<div id='tracker_readme_edited'>".$readme->edited."</div>
-					<div id='tracker_readme_date'>".$readme->date."</div>
-					<div id='tracker_readme_author'>".$readme->author."</div>
+					<div id='tracker_readme_text'>".$readme->body."</div>
+					<div id='tracker_readme_foot'>
+						<div id='tracker_readme_edited'>".$readme->edited."</div>
+						<div id='tracker_readme_date'>".$readme->date."</div>
+						<div id='tracker_readme_author'>".$readme->author."</div>
+					</div>
 				</div>
+
 				<div id='tracker_todo'>
 					<div id='tracker_todo_id'>".$todo->id."</div>
 					<div id='tracker_todo_headline'>".$todo->headline."</div>
 					<div id='tracker_todo_date'>".$todo->date."</div>
-				</div>
-				<div id='tracker_priority_index'>
-					<div id='tracker_priority_index_type'>".$priority_index->type."</div>
-					<div id='tracker_priority_index_workload'>".$priority_index->workload."</div>
-					<div id='tracker_priority_index_importance'>".$priority_index->importance."</div>
-					<div id='tracker_priority_index_due_date'>".$priority_index->due_date."</div>
-				</div>
-				<div id='tracker_notes'>
-					<div id='tracker_notes_body>".$notes->body."</div>
-					<div id='tracker_notes_date>".$notes->date."</div>
+					<div id='tracker_notes'>
+						<div id='tracker_notes_body>".$notes->body."</div>
+						<div id='tracker_notes_date>".$notes->date."</div>
+					</div>
+					<div id='tracker_priority_index'>
+						<div id='tracker_priority_index_type'>".$priority_index->type."</div>
+						<div id='tracker_priority_index_workload'>".$priority_index->workload."</div>
+						<div id='tracker_priority_index_importance'>".$priority_index->importance."</div>
+						<div id='tracker_priority_index_due_date'>".$priority_index->due_date."</div>
+					</div>
 				</div>
 			</div>
 		</div>
