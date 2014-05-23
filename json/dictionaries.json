@@ -1,0 +1,32 @@
+{
+	"priority_index":[{
+		"type":[{
+			"bug":"1",
+			"fix":"2",
+			"rewrite":"3",
+			"feature":"4",
+			"request":"5",
+			"style":"6"
+		}],
+		"workload":[{
+			"quick":"1",
+			"light":"2",
+			"medium":"3",
+			"heavy":"4",
+			"intense":"5"
+		}],
+		"importance":[{
+			"minimal":"1",
+			"low":"2",
+			"medium":"3",
+			"high":"4",
+			"urgent":"5"
+		}],
+		"due_date":[{
+			"specific":"1",
+			"soon":"2",
+			"sometime":"3",
+			"eventually":"4"
+		}]
+	}]
+}

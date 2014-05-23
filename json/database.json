@@ -14,13 +14,64 @@
 			"date":"04-22-14",
 			"notes":[{
 				"body":"To change this, divs only need to be declared hidden when the view switches.",
-				"date":"05-22-14"
+				"date":"05-23-14"
 			}],
 			"priority_index":[{
 				"type":"bug",
 				"workload":"light",
 				"importance":"minimal",
 				"due_date":"none"
+			}]
+		},{
+			"id":"2",
+			"headline":"The second change to be made",
+			"date":"04-22-14",
+			"notes":[{
+				"body":"This is a really tough change to figure out.",
+				"date":"05-23-14"
+			},{
+				"body":"I can't figure it out!",
+				"date":"05-23-14"
+			},{
+				"body":"Okay I think I'm on to something...",
+				"date":"05-23-14"
+			},{
+				"body":"DONE That was actually super easy ._.",
+				"date":"05-23-14"
+			}],
+			"priority_index":[{
+				"type":"bug",
+				"workload":"heavy",
+				"importance":"medium",
+				"due_date":"none"
+			}]
+		},{
+			"id":"3",
+			"headline":"Realign some things",
+			"date":"04-22-14",
+			"notes":[{
+				"body":"this deals with css",
+				"date":"05-23-14"
+			}],
+			"priority_index":[{
+				"type":"style",
+				"workload":"quick",
+				"importance":"minimal",
+				"due_date":"none"
+			}]
+		},{
+			"id":"4",
+			"headline":"Add button to view field",
+			"date":"04-22-14",
+			"notes":[{
+				"body":"realign css and create new button with functions",
+				"date":"05-23-14"
+			}],
+			"priority_index":[{
+				"type":"feature",
+				"workload":"medium",
+				"importance":"medium",
+				"due_date":"soon"
 			}]
 		}]
 	}]

@@ -10,7 +10,7 @@ $(document).ready(function(){
 	
 // server info
 	$('#body_panel_links_lucent').click(function(){
-		$('#lucid').css({'visibility':'visible'});
+		$('#lucent').css({'visibility':'visible'});
 			$('#queued').css({'visibility':'hidden'});
 			$('#jot').css({'visibility':'hidden'});
 			$('#bugger').css({'visibility':'hidden'});

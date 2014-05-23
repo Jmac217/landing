@@ -1,0 +1,23 @@
+{
+	"server":[{
+		"name":"localhost",
+		"description":"My local machine",
+		"usage":"web",
+		"url":"http://10.0.0.140"
+	},{
+		"name":"arch-testing",
+		"description":"Local test server",
+		"usage":"web, git, samba",
+		"url":"http://10.0.0.240"
+	},{
+		"name":"arch-production",
+		"description":"Local production server",
+		"usage":"web, git, samba",
+		"url":"http://10.0.0.246"
+	},{
+		"name":"Digital Ocean",
+		"description":"Remote Droplet",
+		"usage":"web, git, owncloud, xmpp, voice-communication, minecraft",
+		"url":"http://jmac217.net"
+	}]
+}

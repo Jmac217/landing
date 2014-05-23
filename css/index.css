@@ -67,22 +67,21 @@ a:hover{color:#222;text-decoration:none;cursor:pointer;}
 						#tracker_body_expanded{position:absolute;top:0px;left:0px;height:100%;width:100%;}
 							#tracker_readme{position:absolute;top:0px;left:0px;height:60%;width:100%;}
 								#tracker_readme_text{position:absolute;top:0px;left:0px;height:100%;width:100%;padding:10px;overflow:auto;}
-								#tracker_readme_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;border-top:solid 1px #888;font-size:10px;padding:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+								#tracker_readme_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;border-top:solid 1px #888;border-bottom:solid 1px #888;font-size:10px;padding:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 									#tracker_readme_edited{position:absolute;right:200px;}
 									#tracker_readme_date{position:absolute;right:100px;}
 									#tracker_readme_author{position:absolute;right:0px;}
-							#tracker_todo{position:absolute;bottom:0px;left:0px;height:40%;width:100%;background-color:white;}
-								#tracker_todo_id{}
-								#tracker_todo_headline{}
-								#tracker_todo_date{}
-								#tracker_notes{position:absolute;bottom:0px;left:0px;width:100%;background-color:brown;}
-									#tracker_notes_body{}
-									#tracker_notes_date{}
-								#tracker_priority_index{position:absolute;top:0px;right:0px;height:70%;width:20%;background-color:green;}
-									#tracker_priority_index_type{}
-									#tracker_priority_index_workload{}
-									#tracker_priority_index_importance{}
-									#tracker_priority_index_due_date{}
+							#tracker_todo{position:absolute;bottom:0px;left:0px;height:40%;width:100%;}
+								#tracker_todo_head{position:absolute;top:0px;left:0px;height:30px;width:100%;background-color:#AAA;padding:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;border-bottom:solid 1px #888;}
+									#tracker_todo_id{position:absolute;top:5px;left:5px;}
+									#tracker_todo_headline{position:absolute;left:25px;top:5px;}
+									#tracker_todo_date{position:absolute;top:5px;right:5px;}
+									#tracker_priority_index{position:absolute;top:5px;right:80px;height:20px;width:100px;}
+										#tracker_priority_index{text-align:right;}
+								#tracker_notes{position:absolute;top:30px;left:0px;height:134px;width:100%;background-color:#AAA;}
+									#tracker_notes_body{position:absolute;top:5px;left:5px;}
+									#tracker_notes_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;padding:5px;border-top:solid 1px #888;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;}
+										#tracker_notes_date{position:absolute;right:5px;;font-size:10px;}
 					#tracker_footer{position:absolute;bottom:0px;left:0px;height:33px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 
 				#queued{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:visible;}
@@ -110,15 +109,16 @@ a:hover{color:#222;text-decoration:none;cursor:pointer;}
 						.note_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
 
 				#lucent{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
-					.server{position:absolute;left:0px;width:100%;}
-						.server_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
-						.server_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
-						.server_selection{position:absolute;height:100%;width:100%;top:20px;background-color:#aaa;}
-							.server_selection_links{position:absolute;height:20px;width:100%;top:0px;background-color:#bbb;text-align:right;}
-							.server_description{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;overflow:hidden;}
-							.server_code{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-							.server_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
-						.server_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}		
+					.server_status{}
+						.server{}
+							.server_status_ping{}
+							.server_status_name{}
+							.server_status_description{}
+							.server_status_usage{}
+							.server_status_url{}
+							/* does the server need notes and/or a timestamp? */
+							.server_status_notes{}
+								.server_status_note{}
 						
 				#bugger{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
 					.bug{position:absolute;left:0px;width:100%;}

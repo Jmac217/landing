@@ -2,7 +2,7 @@
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/index.css' />
 		<link rel='shortcut icon' href='res/pipe-blend.png' />
-		<script type='text/javascript' src='js/jquery.js'></script>
+		<script type='text/javascript' src='js/jquery1.js'></script>
 		<script type='text/javascript' src='js/index.js'></script>
 		<title>Landing Zone</title>
 	</head>
@@ -91,15 +91,15 @@
 						<span id='marquee'><marquee><!-- Rss Stuff from "newsbeard" --></marquee></span>
 						<!-- application panel -->
 						<!-- - pop this up a level, to be accessible from any of the pages -->
-						<div id='jot'><?php include 'php/jot.php'; ?></div>
 						<div id='queued'><?php include 'php/queued.php'; ?></div>
-						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
+						<div id='jot'><?php include 'php/jot.php'; ?></div>
 						<div id='lucent'><?php include 'php/lucent.php'; ?></div>
+						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
 					</div>
 					
 					<!-- application exchange -->
-					<div class='jot'></div>
 					<div class='queued'></div>
+					<div class='jot'></div>
 					<div class='lucent'></div>
 					<div class='bugger'>
 						<div id='bugger_form'>

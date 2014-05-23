@@ -43,18 +43,19 @@ echo "
 				</div>
 
 				<div id='tracker_todo'>
-					<div id='tracker_todo_id'>".$todo->id."</div>
-					<div id='tracker_todo_headline'>".$todo->headline."</div>
-					<div id='tracker_todo_date'>".$todo->date."</div>
-					<div id='tracker_notes'>
-						<div id='tracker_notes_body>".$notes->body."</div>
-						<div id='tracker_notes_date>".$notes->date."</div>
+					<div id='tracker_todo_head'>
+						<div id='tracker_todo_id'>".$todo->id.")</div>
+						<div id='tracker_todo_headline'>".$todo->headline."</div>
+						<div id='tracker_todo_date'>".$todo->date."</div>
+						<div id='tracker_priority_index'>
+							<div id='tracker_priority_index_value'>Medium</div>
+						</div>
 					</div>
-					<div id='tracker_priority_index'>
-						<div id='tracker_priority_index_type'>".$priority_index->type."</div>
-						<div id='tracker_priority_index_workload'>".$priority_index->workload."</div>
-						<div id='tracker_priority_index_importance'>".$priority_index->importance."</div>
-						<div id='tracker_priority_index_due_date'>".$priority_index->due_date."</div>
+					<div id='tracker_notes'>
+						<div id='tracker_notes_body'>".$notes->body."</div>
+						<div id='tracker_notes_foot'>
+							<div id='tracker_notes_date'>".$notes->date."</div>
+						</div>
 					</div>
 				</div>
 			</div>

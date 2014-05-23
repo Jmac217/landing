@@ -21,3 +21,11 @@ Jot will nest and synchronise across the criteria and subsets of categories and 
 'Now that I've implemented the beginnings of JSON I feel I've opened up a broad multitude of directions and am feeling the way this project was supposed to prevent.'
 'I'm almost entirely finished with thinking about this project in terms of separate modules, that is entirely tedious and inefficient.'
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Readme and the overall list of todos must be collapsable; the readme for more expanded to todos, up to 3, and todos for a broader sense of things to do.
+
+Readme loop
+~~~~~~~~~
+
+before the loops can begin a good method for finding the max number of keys in a json array must be found.
