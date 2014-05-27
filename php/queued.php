@@ -34,6 +34,8 @@ echo "
 			</div>
 			<div id='tracker_body_expanded'>
 				<div id='tracker_readme'>
+					<!--<div id='tracker_readme_collapse'>^</div>-->
+					<div id='tracker_readme_expand'>v</div>
 					<div id='tracker_readme_text'>".$readme->body."</div>
 					<div id='tracker_readme_foot'>
 						<div id='tracker_readme_edited'>".$readme->edited."</div>
@@ -52,6 +54,12 @@ echo "
 						</div>
 					</div>
 					<div id='tracker_notes'>
+						<div id='tracker_notes_left'>
+							<div id='tracker_notes_left_text'><</div>
+						</div>
+						<div id='tracker_notes_right'>
+							<div id='tracker_notes_right_text'>></div>
+						</div>
 						<div id='tracker_notes_body'>".$notes->body."</div>
 						<div id='tracker_notes_foot'>
 							<div id='tracker_notes_date'>".$notes->date."</div>

@@ -6,6 +6,7 @@ come up with a simple layout for the queue view
 - Style is a minor necessity at this point; the idea is to display the 'project' page of priority in the view.
 ! the layout needs to be defined before continuing
 
+When the README collapses, the notes section should expand and possibly become vertically scrollable. I'll have to see how well that ends up working, as of now the left-right cycle should be implemented.
 
 rewrite queued.php to use JSON
 Create the global note tracker based on Bugger
