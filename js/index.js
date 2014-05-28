@@ -1,5 +1,43 @@
 $(document).ready(function(){
 
+// tracker views
+// readme
+$('#tracker_readme_collapse').click(function(){
+	$('#tracker_readme').animate({'height':'40px'}).css({'overflow':'hidden'});
+	$('#tracker_todo').animate({'top':'20px'});
+	$('#tracker_notes').animate({'height':'360px'});
+	$('#tracker_readme_collapse').css({'visibility':'hidden'});
+	$('#tracker_readme_expand').css({'visibility':'visible'});
+});
+$('#tracker_readme_expand').click(function(){
+	$('#tracker_readme').animate({'height':'246px'});
+	$('#tracker_todo').animate({'top':'246px'});
+	$('#tracker_notes').animate({'height':'134px'});
+	$('#tracker_readme_expand').css({'visibility':'hidden'});
+	$('#tracker_readme_collapse').css({'visibility':'visible'});
+});
+// notes
+var notes_page=0;
+var notes_page_cap=3;
+function post_notes(){
+	$.post('php/queued.php',{notes_page:notes_page},function(data){
+	alert(data);	
+	$('#tracker_notes_body').html(data);
+	});
+}
+function notes_next_id(notes_page){
+	notes_page++;
+	post_notes();
+	return notes_page;
+}
+function notes_last_id(notes_page){
+	notes_page--;
+	post_notes();
+	return notes_page;
+}
+$('#tracker_notes_left').click(function(){});
+$('#tracker_notes_right').click(function(){});
+
 // queued
 	$('#body_panel_links_queued').click(function(){
 		$('#queued').css({'visibility':'visible'});

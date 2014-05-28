@@ -5,10 +5,15 @@ $JSON = json_decode(file_get_contents('json/database.json', true));
 
 $project = $JSON->project[0];
 $readme = $project->readme[0];
-$todo = $project->todo[0];
 $priority_index = $todo->priority_index[0];
-$notes = $todo->notes[0];
+$todo = $project->todo[0];
 
+if(isset($_POST)){
+	$notes_id = $_POST['notes_page'];
+	$notes = $todo->notes[$notes_id];
+}else{
+	$notes = $todo->notes[0];
+}
 echo "
 	<div id='tracker'>
 		<div id='tracker_header'>
@@ -34,7 +39,7 @@ echo "
 			</div>
 			<div id='tracker_body_expanded'>
 				<div id='tracker_readme'>
-					<!--<div id='tracker_readme_collapse'>^</div>-->
+					<div id='tracker_readme_collapse'>^</div>
 					<div id='tracker_readme_expand'>v</div>
 					<div id='tracker_readme_text'>".$readme->body."</div>
 					<div id='tracker_readme_foot'>

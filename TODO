@@ -7,6 +7,7 @@ come up with a simple layout for the queue view
 ! the layout needs to be defined before continuing
 
 When the README collapses, the notes section should expand and possibly become vertically scrollable. I'll have to see how well that ends up working, as of now the left-right cycle should be implemented.
+- tracker*{readme,collapse} will need set to be invisible, it seems, when swapping between seperate panel views
 
 rewrite queued.php to use JSON
 Create the global note tracker based on Bugger
