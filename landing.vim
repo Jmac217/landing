@@ -100,13 +100,15 @@ badd +17 workflowPrototyping.txt
 badd +1 COPYING
 badd +1 js\index.js
 badd +1 php\jot.php
-badd +1 php\queued.php
+badd +15 php\queued.php
 badd +12 php\bugger.php
-badd +2 php\lucent.php
+badd +4 php\lucent.php
 badd +1 php\logger.php
 badd +1 php\connect.php
 badd +1 php\send_report.php
-args 
+badd +0 json\database.json
+badd +0 json\server_status.json
+silent! argdel *
 edit css\index.css
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -144,6 +146,15 @@ wincmd _ | wincmd |
 split
 5wincmd k
 wincmd w
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd w
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 wincmd w
 wincmd _ | wincmd |
 vsplit
@@ -151,37 +162,40 @@ vsplit
 wincmd w
 wincmd w
 wincmd w
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 27 + 30) / 60)
-exe 'vert 1resize ' . ((&columns * 46 + 118) / 236)
-exe '2resize ' . ((&lines * 24 + 30) / 60)
-exe 'vert 2resize ' . ((&columns * 46 + 118) / 236)
+exe '1resize ' . ((&lines * 36 + 30) / 60)
+exe 'vert 1resize ' . ((&columns * 60 + 118) / 236)
+exe '2resize ' . ((&lines * 15 + 30) / 60)
+exe 'vert 2resize ' . ((&columns * 60 + 118) / 236)
 exe '3resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 3resize ' . ((&columns * 46 + 118) / 236)
+exe 'vert 3resize ' . ((&columns * 60 + 118) / 236)
 exe '4resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 4resize ' . ((&columns * 46 + 118) / 236)
+exe 'vert 4resize ' . ((&columns * 60 + 118) / 236)
 exe '5resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 5resize ' . ((&columns * 46 + 118) / 236)
-exe 'vert 6resize ' . ((&columns * 103 + 118) / 236)
-exe 'vert 7resize ' . ((&columns * 11 + 118) / 236)
-exe '8resize ' . ((&lines * 3 + 30) / 60)
-exe 'vert 8resize ' . ((&columns * 73 + 118) / 236)
-exe '9resize ' . ((&lines * 17 + 30) / 60)
-exe 'vert 9resize ' . ((&columns * 73 + 118) / 236)
-exe '10resize ' . ((&lines * 19 + 30) / 60)
-exe 'vert 10resize ' . ((&columns * 52 + 118) / 236)
-exe '11resize ' . ((&lines * 19 + 30) / 60)
-exe 'vert 11resize ' . ((&columns * 20 + 118) / 236)
-exe '12resize ' . ((&lines * 8 + 30) / 60)
-exe 'vert 12resize ' . ((&columns * 73 + 118) / 236)
+exe 'vert 5resize ' . ((&columns * 60 + 118) / 236)
+exe 'vert 6resize ' . ((&columns * 1 + 118) / 236)
+exe 'vert 7resize ' . ((&columns * 77 + 118) / 236)
+exe '8resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 8resize ' . ((&columns * 95 + 118) / 236)
+exe '9resize ' . ((&lines * 48 + 30) / 60)
+exe 'vert 9resize ' . ((&columns * 68 + 118) / 236)
+exe '10resize ' . ((&lines * 48 + 30) / 60)
+exe 'vert 10resize ' . ((&columns * 26 + 118) / 236)
+exe '11resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 11resize ' . ((&columns * 93 + 118) / 236)
+exe '12resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 12resize ' . ((&columns * 1 + 118) / 236)
 exe '13resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 13resize ' . ((&columns * 73 + 118) / 236)
-exe '14resize ' . ((&lines * 5 + 30) / 60)
-exe 'vert 14resize ' . ((&columns * 73 + 118) / 236)
+exe 'vert 13resize ' . ((&columns * 67 + 118) / 236)
+exe '14resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 14resize ' . ((&columns * 27 + 118) / 236)
+exe '15resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 15resize ' . ((&columns * 95 + 118) / 236)
+exe '16resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 16resize ' . ((&columns * 95 + 118) / 236)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -285,7 +299,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -397,7 +411,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 12) / 24)
+let s:l = 1 - ((0 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -960,12 +974,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 29) / 58)
+let s:l = 6 - ((5 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+6
+normal! 021|
 lcd C:\xampp\htdocs\landing
 wincmd w
 argglobal
@@ -1076,12 +1090,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 3 - ((2 * winheight(0) + 1) / 3)
+let s:l = 2 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 06|
+2
+normal! 0
 lcd C:\xampp\htdocs\landing
 wincmd w
 argglobal
@@ -1192,11 +1206,123 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 13 - ((3 * winheight(0) + 8) / 17)
+let s:l = 4 - ((1 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
+4
+normal! 0
+lcd C:\xampp\htdocs\landing
+wincmd w
+argglobal
+edit C:\xampp\htdocs\landing\json\database.json
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=j1,J1
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal copyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'javascript'
+setlocal filetype=javascript
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'javascript'
+setlocal syntax=javascript
+endif
+setlocal tabstop=2
+setlocal tags=C:/xampp/htdocs/landing/.git/javascript.tags,C:/xampp/htdocs/landing/.git/tags,./tags,tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
 normal! 0
 lcd C:\xampp\htdocs\landing
 wincmd w
@@ -1308,11 +1434,11 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((0 * winheight(0) + 9) / 19)
+let s:l = 13 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+13
 normal! 0
 lcd C:\xampp\htdocs\landing
 wincmd w
@@ -1424,7 +1550,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 9) / 19)
+let s:l = 1 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1540,7 +1666,119 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 4) / 8)
+let s:l = 1 - ((0 * winheight(0) + 0) / 1)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd C:\xampp\htdocs\landing
+wincmd w
+argglobal
+edit C:\xampp\htdocs\landing\json\server_status.json
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=j1,J1
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal copyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'javascript'
+setlocal filetype=javascript
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'javascript'
+setlocal syntax=javascript
+endif
+setlocal tabstop=2
+setlocal tags=C:/xampp/htdocs/landing/.git/javascript.tags,C:/xampp/htdocs/landing/.git/tags,./tags,tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1772,7 +2010,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 5)
+let s:l = 1 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1780,33 +2018,37 @@ normal! zt
 normal! 0
 lcd C:\xampp\htdocs\landing
 wincmd w
-2wincmd w
-exe '1resize ' . ((&lines * 27 + 30) / 60)
-exe 'vert 1resize ' . ((&columns * 46 + 118) / 236)
-exe '2resize ' . ((&lines * 24 + 30) / 60)
-exe 'vert 2resize ' . ((&columns * 46 + 118) / 236)
+7wincmd w
+exe '1resize ' . ((&lines * 36 + 30) / 60)
+exe 'vert 1resize ' . ((&columns * 60 + 118) / 236)
+exe '2resize ' . ((&lines * 15 + 30) / 60)
+exe 'vert 2resize ' . ((&columns * 60 + 118) / 236)
 exe '3resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 3resize ' . ((&columns * 46 + 118) / 236)
+exe 'vert 3resize ' . ((&columns * 60 + 118) / 236)
 exe '4resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 4resize ' . ((&columns * 46 + 118) / 236)
+exe 'vert 4resize ' . ((&columns * 60 + 118) / 236)
 exe '5resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 5resize ' . ((&columns * 46 + 118) / 236)
-exe 'vert 6resize ' . ((&columns * 103 + 118) / 236)
-exe 'vert 7resize ' . ((&columns * 11 + 118) / 236)
-exe '8resize ' . ((&lines * 3 + 30) / 60)
-exe 'vert 8resize ' . ((&columns * 73 + 118) / 236)
-exe '9resize ' . ((&lines * 17 + 30) / 60)
-exe 'vert 9resize ' . ((&columns * 73 + 118) / 236)
-exe '10resize ' . ((&lines * 19 + 30) / 60)
-exe 'vert 10resize ' . ((&columns * 52 + 118) / 236)
-exe '11resize ' . ((&lines * 19 + 30) / 60)
-exe 'vert 11resize ' . ((&columns * 20 + 118) / 236)
-exe '12resize ' . ((&lines * 8 + 30) / 60)
-exe 'vert 12resize ' . ((&columns * 73 + 118) / 236)
+exe 'vert 5resize ' . ((&columns * 60 + 118) / 236)
+exe 'vert 6resize ' . ((&columns * 1 + 118) / 236)
+exe 'vert 7resize ' . ((&columns * 77 + 118) / 236)
+exe '8resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 8resize ' . ((&columns * 95 + 118) / 236)
+exe '9resize ' . ((&lines * 48 + 30) / 60)
+exe 'vert 9resize ' . ((&columns * 68 + 118) / 236)
+exe '10resize ' . ((&lines * 48 + 30) / 60)
+exe 'vert 10resize ' . ((&columns * 26 + 118) / 236)
+exe '11resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 11resize ' . ((&columns * 93 + 118) / 236)
+exe '12resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 12resize ' . ((&columns * 1 + 118) / 236)
 exe '13resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 13resize ' . ((&columns * 73 + 118) / 236)
-exe '14resize ' . ((&lines * 5 + 30) / 60)
-exe 'vert 14resize ' . ((&columns * 73 + 118) / 236)
+exe 'vert 13resize ' . ((&columns * 67 + 118) / 236)
+exe '14resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 14resize ' . ((&columns * 27 + 118) / 236)
+exe '15resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 15resize ' . ((&columns * 95 + 118) / 236)
+exe '16resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 16resize ' . ((&columns * 95 + 118) / 236)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

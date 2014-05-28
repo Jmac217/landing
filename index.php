@@ -3,7 +3,9 @@
 		<link rel='stylesheet' type='text/css' href='css/index.css' />
 		<link rel='shortcut icon' href='res/pipe-blend.png' />
 		<script type='text/javascript' src='js/jquery1.js'></script>
+		<script type='text/javascript' src='js/globals.js'></script>
 		<script type='text/javascript' src='js/index.js'></script>
+		<script type='text/javascript' src='js/queued.js'></script>
 		<title>Landing Zone</title>
 	</head>
 	<body>
