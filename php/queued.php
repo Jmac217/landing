@@ -5,6 +5,9 @@ $JSON = json_decode(file_get_contents('json/database.json', true));
 
 $project = $JSON->project[0];
 $readme = $project->readme[0];
+$todo = $project->todo[1];
+$notes = $todo->notes[0];
+$priority_index = $todo->priority_index[0];
 
 //$file = file_get_contents($readme->body,true);
 
@@ -44,7 +47,29 @@ echo "
 					</div>
 				</div>
 				<div id='tracker_todo'>";
-					include "php/tracker_todo.php";
+					//include "php/tracker_todo.php";
+					echo "
+					<div id='tracker_todo_head'>
+						<div id='tracker_todo_id'>".$todo->id.")</div>
+						<div id='tracker_todo_headline'>".$todo->headline."</div>
+						<div id='tracker_todo_date'>".$todo->date."</div>
+						<div id='tracker_priority_index'>
+							<div id='tracker_priority_index_value'>Medium</div>
+						</div>
+					</div>
+					<div id='tracker_notes'>
+						<div id='tracker_notes_left'>
+							<div id='tracker_notes_left_text'><</div>
+						</div>
+						<div id='tracker_notes_right'>
+							<div id='tracker_notes_right_text'>></div>
+						</div>
+						<div id='tracker_notes_body'>".$notes->body."</div>
+						<div id='tracker_notes_foot'>
+							<div id='tracker_notes_date'>".$notes->date."</div>
+						</div>
+					</div>
+					";
 				echo"
 				</div>
 			</div>

@@ -93,7 +93,71 @@
 						<span id='marquee'><marquee><!-- Rss Stuff from "newsbeard" --></marquee></span>
 						<!-- application panel -->
 						<!-- - pop this up a level, to be accessible from any of the pages -->
-						<div id='queued'><?php include 'php/queued.php'; ?></div>
+						<div id='queued'><?php /*include 'php/queued.php';*/ ?>
+						
+							<div id='tracker'>
+								<div id='tracker_header'>
+									<div id='tracker_header_name'></div>
+									<div id='tracker_header_id'></div>
+								</div>
+								<div id='tracker_body'>
+									<div id='tracker_body_collpased'>
+										<div id='tracker_list'>
+										
+											<!-- vv template for generated list vv -->
+											
+												<div class='tracker_list_item'>
+													<div class='tracker_li_name'></div>
+													<div class='tracker_li_type'></div>
+													<div class='tracker_li_priority'></div>
+													<div class='tracker_li_date'></div>
+												</div>
+												
+											<!-- ^^ template for generated list ^^ -->
+											
+										</div>
+									</div>
+									<div id='tracker_body_expanded'>
+										<div id='tracker_readme'>
+											<div id='tracker_readme_collapse'>^</div>
+											<div id='tracker_readme_expand'>v</div>
+											<div id='tracker_readme_text'></div>
+											<div id='tracker_readme_foot'>
+												<div id='tracker_readme_edited'></div>
+												<div id='tracker_readme_date'></div>
+												<div id='tracker_readme_author'></div>
+											</div>
+										</div>
+										<div id='tracker_todo'>
+											<div id='tracker_todo_head'>
+												<div id='tracker_todo_id'></div>
+												<div id='tracker_todo_headline'></div>
+												<div id='tracker_todo_date'></div>
+												<div id='tracker_priority_index'>
+													<div id='tracker_priority_index_value'>[Medium]</div>
+												</div>
+											</div>
+											<div id='tracker_notes'>
+												<div id='tracker_notes_left'>
+													<div id='tracker_notes_left_text'><</div>
+												</div>
+												<div id='tracker_notes_right'>
+													<div id='tracker_notes_right_text'>></div>
+												</div>
+												<div id='tracker_notes_body'></div>
+												<div id='tracker_notes_foot'>
+													<div id='tracker_notes_date'></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id='tracker_footer'>
+									<!-- nothing so far -->
+								</div>
+							</div>
+						
+						</div>
 						<div id='jot'><?php include 'php/jot.php'; ?></div>
 						<div id='lucent'><?php include 'php/lucent.php'; ?></div>
 						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
