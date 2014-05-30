@@ -118,14 +118,14 @@
 										</div>
 									</div>
 									<div id='tracker_body_expanded'>
-										<div id='tracker_readme'>
-											<div id='tracker_readme_collapse'>^</div>
-											<div id='tracker_readme_expand'>v</div>
-											<div id='tracker_readme_text'></div>
-											<div id='tracker_readme_foot'>
-												<div id='tracker_readme_edited'></div>
-												<div id='tracker_readme_date'></div>
-												<div id='tracker_readme_author'></div>
+										<div id='tracker_documentation'>
+											<div id='tracker_documentation_collapse'>^</div>
+											<div id='tracker_documentation_expand'>v</div>
+											<div id='tracker_documentation_text'></div>
+											<div id='tracker_documentation_foot'>
+												<div id='tracker_documentation_edited'></div>
+												<div id='tracker_documentation_date'></div>
+												<div id='tracker_documentation_author'></div>
 											</div>
 										</div>
 										<div id='tracker_todo'>

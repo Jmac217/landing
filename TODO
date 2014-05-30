@@ -5,6 +5,9 @@ Realized all of my commits have been anonymous '~'
 queue
 -----
 
+in JSON: rename 'readme' to 'documentation', and add type and/or title. This will allow for multiple pages of reading material.
+- also add a list of document_types in the dictionary json
+
 I'm starting to wonder if I should remove all of the PHP, and just rewrite it in Javascript ...
 
 Sanity Check -- sometimes you just need to look at it... Just look at it, would you just look at it? Look at it! Oh would you look at that.
