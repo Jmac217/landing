@@ -18,19 +18,19 @@
 					<p class='title'>Webapps</p>
 					<ul>
 						<li>
-								<a href='./inventory/'>Inventory</a>
+								<a href='../inventory/'>Inventory</a>
 						</li>
 						<li>
-								<a href='./MLT/'>MLT</a>
+								<a href='../MLT/'>MLT</a>
 						</li>
 						<li>
-								<a href='./TBOC/'>TBOC</a>
+								<a href='../TBOC/'>TBOC</a>
 						</li>
 						<li>
-								<a href='./Codefront/photo'>Photo</a>
+								<a href='../Codefront/photo'>Photo</a>
 						</li>
 						<li>
-								<a href='./eto-reworked'>Sundial</a>
+								<a href='../eto-reworked'>Sundial</a>
 						</li>
 						<li>
 								<a href='http://localhost/Jmac217/Bocce'>Bocce</a>
