@@ -1,36 +1,30 @@
 priority => queue, jot, log, style, features
 
-Realized all of my commits have been anonymous '~'
-
-queue
------
+__Queue__
 
 in JSON: rename 'readme' to 'documentation', and add type and/or title. This will allow for multiple pages of reading material.
 - also add a list of document_types in the dictionary json
+- I think all that's left is queued.php and index.css. Some javascript might still need changed too.
 
-I'm starting to wonder if I should remove all of the PHP, and just rewrite it in Javascript ...
+Most of the PHP is being rewritten in Javascript now.
+- continue here
 
-Sanity Check -- sometimes you just need to look at it... Just look at it, would you just look at it? Look at it! Oh would you look at that.
-
---Thoughts on a login system--
-There will be a configuration(s).json created that will continuously update session variables. You'll always be right where you left off when you closed your browser. This file plus a cookie to remain logged in will be sweeet.
-For the logins themselves I think I'll create something like the following hierarchy: profiles -> {shared,user} -> *.json
-
-
-come up with a simple layout for the queue view
-- Style is a minor necessity at this point; the idea is to display the 'project' page of priority in the view.
-! the layout needs to be defined before continuing
-
-When the README collapses, the notes section should expand and possibly become vertically scrollable. I'll have to see how well that ends up working, as of now the left-right cycle should be implemented.
+When the README collapses, the notes section should expand and possibly become vertically scrollable. I'll have to see how well that ends up working.
+- The left-right cycle should be implemented at least.
 - tracker*{readme,collapse} will need set to be invisible, it seems, when swapping between separate panel views
 
-looks like queued will need to be broken apart... I'm not really sure how this is going to work
-
 Project will be chosen via a dropdown, like what's in the inventory. It's marked with a 'v'
+- This could be added at any time
+- For the approach I'm taking I'm working from the inside out, which is to say starting with the notes alternation, then the documentation, then the projects.
 
-rewrite queued.php to use JSON
-Create the global note tracker based on Bugger
-- Rewrite for JSON and expand the fields to be more generic, and less modular.
+#tracker_documentation CSS will need some reorganization to include a header after the javascript is set up.
+- This header will be where different documents can be cycled through too.
+-- I don't know yet whether it will be via selecting a category from a dropdown menu and cycling through by type, or if it would be efficient enough to allow the entirety of the documentation to populate a sing listing. 
+- This header will include links to all of the separated functionality: collapse into ~notes_large_view~ of into ~notes_list_view~
+! Think of the tracker as two separate windows: a documentation pane and a notes pane, each with their own headers and views.
+
+
+__Panel__
 
 I want to slim down the #panel; maybe to half the width, but allow it to expand by clicking a button.
 - moving modules to fit in to the lengthened list
@@ -43,26 +37,21 @@ Add specialized fields to note queue?
 -	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
 * Create a login for this, otherwise it's really stupid to leave it online for too long.
 
+__Logging__
+
 Pull the inventory logger into global scope.
 - For modules add log.json with urls to specific logs to include, this allows for expansion as long as the logger is generic enough to handle everything.
 - Output is to plain text with my personal styling, so maybe write a schema for others to edit?
 -	Results are shown in either HTML or plain-text
 
-::Database structure:: (This should be entirely JSON based)
 
-		Project
-			ID
-			readme
-				body
-				edited
-				date
-					author
-			todo (jot)
-				ID
-				priority *manually set, but can also be set based on date*
-				type (idea, fix, bug, style, feature, ... <= `types.json`)
-				headline
-				[note]
-					body
-					date
-				submitted_date
+
+== Thoughts ==
+
+--Thoughts on a login system--
+There will be a configuration(s).json created that will continuously update session variables. You'll always be right where you left off when you closed your browser. This file plus a cookie to remain logged in will be sweeet.
+For the logins themselves I think I'll create something like the following hierarchy: profiles -> {shared,user} -> *.json
+
+come up with a simple layout for the queue view
+- Style is a minor necessity at this point; the idea is to display the 'project' page of priority in the view.
+! the layout needs to be defined before continuing

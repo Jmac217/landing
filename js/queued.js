@@ -62,8 +62,14 @@ $.getJSON('json/database.json',function(json){
 
 	$('#tracker_notes_right').click(function(){
 		if(project_num<=project_cap){
+			alert('before <='+project_num);
 			++project_num;
-		}else{project_num=project_init;}
+			alert('after <='+project_num);
+		}else{
+			alert('before ='+project_num);
+			project_num=project_init;
+			alert('after ='+project_num);
+		}
 		notes = todo.notes[notes_num];
 		$('tracker_notes_body').html(notes.body);
 		$('tracker_notes_date').html(notes.date);

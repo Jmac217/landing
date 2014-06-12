@@ -1,23 +1,17 @@
 
 <!-- debug -->
-
+<!--
 <html>
 	<head>
-		<style>
-			.bug{background-color:gray;}
-			.bug_id{background-color:#666;}
-			.bug_name{color:white;}
-			.bug_status{position:absolute;right:30px;color:#DAA;}
-			.bug_description{color:white;}
-			.bug_date{color:black;}
-		</style>
+		<link rel='stylesheet' type='text/css' href='../css/index.css' />
 	</head>
 </html>
+-->
 
 <?php include 'connect.php';
 
 // variables
-$sql = 'SELECT * FROM bugs';
+$sql = 'SELECT * FROM inventory';
 $query = mysql_query($sql)or die(mysql_error());
 $rows = mysql_num_rows($query);
 $startingRow = 1;
@@ -46,12 +40,20 @@ if ($rows == 0){
 			// set up HTML
 			echo "
 				<div class='bug' id='".$row['id']."' style='top:".setTop($t, '100')."'>
-					<span class='bug_id'>".$row['id']."</span>
-					<span class='bug_name'><a href='mailto:".$row['name']."'>".$row['name']."</a></span>
-					<span class='bug_status'>".$row['status']."</span><br/>
-					<span class='bug_description'>".$row['description']."</span><br/>
+					<span class='bug_name'>".$row['name']."</span>
+					<span class='bug_status'>".$row['status']."</span>
+					<span class='bug_selection'>
+						<span class='bug_selection_links'>
+							<a class='bug_selection_link_code'>code</a> |
+							<a class='bug_selection_link_description'>description</a> |
+							<a class='bug_selection_link_notes'>notes</a>
+						</span>
+						<span class='bug_code'>".$row['code']."</span>
+						<span class='bug_description'>".$row['description']."</span>
+						<span class='bug_notes'>".$row['notes']."</span>
+					</span>
 					<span class='bug_timestamp'>".$row['timestamp']."</span>
-				</div><br/>
+				</div>
 			";
 			$t++;
 			$i++;

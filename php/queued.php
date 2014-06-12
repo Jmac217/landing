@@ -4,12 +4,12 @@
 $JSON = json_decode(file_get_contents('json/database.json', true));
 
 $project = $JSON->project[0];
-$readme = $project->readme[0];
+$documentation = $project->documentation[0];
 $todo = $project->todo[1];
 $notes = $todo->notes[0];
 $priority_index = $todo->priority_index[0];
 
-//$file = file_get_contents($readme->body,true);
+//$file = file_get_contents($documentation->body,true);
 
 
 echo "
@@ -36,14 +36,15 @@ echo "
 				</div>
 			</div>
 			<div id='tracker_body_expanded'>
-				<div id='tracker_readme'>
-					<div id='tracker_readme_collapse'>^</div>
-					<div id='tracker_readme_expand'>v</div>
-					<div id='tracker_readme_text'>".$readme->body."</div>
-					<div id='tracker_readme_foot'>
-						<div id='tracker_readme_edited'>".$readme->edited."</div>
-						<div id='tracker_readme_date'>".$readme->date."</div>
-						<div id='tracker_readme_author'>".$readme->author."</div>
+				<div id='tracker_documentation'>
+					<div id='tracker_documentation_collapse'>^</div>
+					<div id='tracker_documentation_expand'>v</div>
+					<!-- still need something done with 'type' and 'title' -->
+					<div id='tracker_documentation_text'>".$documentation->body."</div>
+					<div id='tracker_documentation_foot'>
+						<div id='tracker_documentation_edited'>".$documentation->edited."</div>
+						<div id='tracker_documentation_date'>".$documentation->date."</div>
+						<div id='tracker_documentation_author'>".$documentation->author."</div>
 					</div>
 				</div>
 				<div id='tracker_todo'>";
