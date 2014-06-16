@@ -40,7 +40,7 @@ echo "
 					<div id='tracker_documentation_collapse'>^</div>
 					<div id='tracker_documentation_expand'>v</div>
 					<!-- still need something done with 'type' and 'title' -->
-					<div id='tracker_documentation_text'>".$documentation->body."</div>
+					<div id='tracker_documentation_body'>".$documentation->body."</div>
 					<div id='tracker_documentation_foot'>
 						<div id='tracker_documentation_edited'>".$documentation->edited."</div>
 						<div id='tracker_documentation_date'>".$documentation->date."</div>

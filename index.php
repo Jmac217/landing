@@ -101,33 +101,23 @@
 									<div id='tracker_header_id'></div>
 								</div>
 								<div id='tracker_body'>
-									<div id='tracker_body_collpased'>
-										<div id='tracker_list'>
-										
-											<!-- vv template for generated list vv -->
-											
-												<div class='tracker_list_item'>
-													<div class='tracker_li_name'></div>
-													<div class='tracker_li_type'></div>
-													<div class='tracker_li_priority'></div>
-													<div class='tracker_li_date'></div>
-												</div>
-												
-											<!-- ^^ template for generated list ^^ -->
-											
-										</div>
-									</div>
-									<div id='tracker_body_expanded'>
+									<div id='tracker_top'>
 										<div id='tracker_documentation'>
 											<div id='tracker_documentation_collapse'>^</div>
 											<div id='tracker_documentation_expand'>v</div>
-											<div id='tracker_documentation_text'></div>
+											<div id='tracker_documentation_head'>
+												<div id='tracker_documentation_head_title'>Documentation</div>
+												<div id='tracker_documentation_head_type'>readme</div>
+											</div>
+											<div id='tracker_documentation_body'></div>
 											<div id='tracker_documentation_foot'>
 												<div id='tracker_documentation_edited'></div>
 												<div id='tracker_documentation_date'></div>
 												<div id='tracker_documentation_author'></div>
 											</div>
 										</div>
+									</div>
+									<div id='tracker_bottom'>
 										<div id='tracker_todo'>
 											<div id='tracker_todo_head'>
 												<div id='tracker_todo_id'></div>

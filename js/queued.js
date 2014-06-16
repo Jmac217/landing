@@ -2,14 +2,15 @@ $(document).ready(function(){
 // tracker views
 // documentation
 $('#tracker_documentation_collapse').click(function(){
-	$('#tracker_documentation').animate({'height':'40px'});
+	$('#tracker_documentation').animate({'height':'35px'});
 	$('#tracker_todo').animate({'top':'20px','height':'390px'});
 	$('#tracker_notes').animate({'height':'360px'});
 	$('#tracker_notes_body').animate({'height':'330px'});
 	$('#tracker_documentation_collapse').css({'visibility':'hidden'});
 	$('#tracker_documentation_expand').css({'visibility':'visible'});
+	$('#tracker_top').css({'visibility':'visible'});
 	setTimeout(function(){
-		$('#tracker_documentation_text').css({'visibility':'hidden'});
+		$('#tracker_documentation_body').css({'visibility':'hidden'});
 	},370);
 });
 $('#tracker_documentation_expand').click(function(){
@@ -19,7 +20,8 @@ $('#tracker_documentation_expand').click(function(){
 	$('#tracker_notes_body').animate({'height':'95px'});
 	$('#tracker_documentation_expand').css({'visibility':'hidden'});
 	$('#tracker_documentation_collapse').css({'visibility':'visible'});
-	$('#tracker_documentation_text').css({'visibility':'visible'});
+	$('#tracker_top').css({'visibility':'hidden'});
+	$('#tracker_documentation_body').css({'visibility':'visible'});
 });
 
 $.getJSON('json/database.json',function(json){
@@ -45,12 +47,12 @@ $.getJSON('json/database.json',function(json){
 	var project_cap = json.project.length;
 	var documentation_cap = project.documentation.length;
 	var todo_cap = project.todo.length;
-	var notes_cap = todo.notes.length;
+	var notes_cap = (todo.notes.length)-1;// minus 1 for index of 0
 	var priority_index_cap = todo.priority_index.length;
 
 	$('#tracker_header_name').html(project.name);
 	$('#tracker_header_id').html('Project ID: '+project.id);
-	$('#tracker_documentation_text').html(documentation.body);
+	$('#tracker_documentation_body').html(documentation.body);
 	$('#tracker_documentation_edited').html(documentation.edited);
 	$('#tracker_documentation_date').html(documentation.date);
 	$('#tracker_documentation_author').html(documentation.author);
@@ -60,23 +62,34 @@ $.getJSON('json/database.json',function(json){
 	$('#tracker_notes_body').html(notes.body);
 	$('#tracker_notes_date').html(notes.date);
 
+	// todo
+	$('#tracker_todo_').click(function(){});
+
+	// notes
 	$('#tracker_notes_right').click(function(){
-		if(project_num<=project_cap){
-			alert('before <='+project_num);
-			++project_num;
-			alert('after <='+project_num);
+		if(notes_num<notes_cap){
+			++notes_num;
 		}else{
-			alert('before ='+project_num);
-			project_num=project_init;
-			alert('after ='+project_num);
+			notes_num=notes_init;
 		}
 		notes = todo.notes[notes_num];
-		$('tracker_notes_body').html(notes.body);
-		$('tracker_notes_date').html(notes.date);
+		$('#tracker_notes_body').html(notes.body);
+		$('#tracker_notes_date').html(notes.date);
 	});
 
-	
-	/*while(project_num>=project_init||project_num<=project_cap){
+	$('#tracker_notes_left').click(function(){
+		if(notes_num>0){
+			--notes_num;
+		}else{
+			notes_num=notes_cap;
+		}
+		notes = todo.notes[notes_num];
+		$('#tracker_notes_body').html(notes.body);
+		$('#tracker_notes_date').html(notes.date);
+	});
+
+	/*
+	while(project_num>=project_init||project_num<=project_cap){
 		while(documentation_num>=documentation_init||documentation_num<=documentation_cap){
 			documentation_num++;
 			console.log(documentation_num);
