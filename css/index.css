@@ -24,7 +24,27 @@ li{color:#333;list-style-type:none;}
 a{text-decoration:none;color:#555;}
 a:hover{color:#222;text-decoration:none;cursor:pointer;}
 
+.box{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;box-shadow:5px 5px 15px #333;}
+.bezzle{border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+
+input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:120%;}
+
 /*#title{cursor:pointer;color:white;}*/
+#user_panel{position:absolute;top:0px;left:0px;height:50px;width:100%;background-image:url('../res/top_panel.png');border-bottom:solid 1px black;}
+	#login_area{position:absolute;top:10px;right:5px;height:30px;width:500px;background-color:blue;}
+		#login_user{position:absolute;left:0px;height:100%;width:50%;}
+		#login_pass{position:absolute;right:0px;height:100%;width:50%;}
+		#login_slider{position:absolute;top:30px;left:0px;height:35px;width:100%;background-color:#ccc;border:solid 1px black;visibility:hidden;}
+			#login_forgotten{position:absolute;top:6px;left:3px;height:20px;width:300px;font-style:italic;}
+				#login_forgotten_username:hover{cursor:pointer;color:black;}
+				#login_forgotten_password:hover{cursor:pointer;color:black;}
+			#login_submit{position:absolute;top:2px;right:3px;border-bottom-right-radius:7px;cursor:pointer;}#login_submit:hover{color:black;}
+	#user_data{position:absolute;top:5px;left:220px;height:40px;width:870px;}
+	#settings{position:absolute;top:10px;left:10px;height:32px;width:32px;background-image:url('../res/cog.png');background-repeat:no-repeat;cursor:pointer;}
+		#settings_slider{position:absolute;top:50px;left:0px;height:300px;width:200px;background-color:#ccc;z-index:10;border-top-right-radius:10px;visibility:hidden;}
+
+#extra_footer{position:absolute;bottom:0px;left:0px;height:25px;width:100%;background-color:#ccc;}
+
 #doc{position:absolute;margin:auto;top:0px;bottom:0px;left:0px;right:0px;width:1300px;height:650px;}
 
 	#panel{position:absolute;left:0px;top:0px;height:100%;width:20%;background-color:#CCC;border-top-left-radius:10px;overflow-y:auto;overflow-x:hidden;}

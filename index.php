@@ -1,3 +1,8 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <html>
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/index.css' />
@@ -9,9 +14,24 @@
 		<title>Landing Zone</title>
 	</head>
 	<body>
+		<div id='user_panel'>
+			<div id='login_area'>
+				<input id='login_user' type='text' value='User' alt='User' />
+				<input id='login_pass' type='password' value='Password' alt='Password' />
+				<div id='login_slider' class='box bezzle'>
+					<span id='login_forgotten'>I have forgotten my <span id='login_forgotten_username'>Username</span> or <span id='login_forgotten_password'>Password</span></span>
+					<input id='login_submit' type='button' value='Login'/>
+				</div>
+			</div>
+			<div id='user_data'></div>
+			<div id='settings'>
+				<div id='settings_slider' class='box bezzle'></div>
+			</div>
+		</div>
 		<div id='doc'>
 		
 			<span id='title'><i>Landing Zone</i></span>
+
 			
 			<div id='panel'>
 				<div id='webapps'>
@@ -34,6 +54,9 @@
 						</li>
 						<li>
 								<a href='http://localhost/Jmac217/Bocce'>Bocce</a>
+						</li>
+						<li>
+								<a href='http://localhost/TBOC/Customers/'>Customer Database</a>
 						</li>
 					<ul>
 				</div>
@@ -195,5 +218,6 @@
 				</span>
 			</div>
 		</div>
+		<div id='extra_footer'></div>
 	</body>
 </html>

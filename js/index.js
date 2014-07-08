@@ -1,5 +1,40 @@
 $(document).ready(function(){
 
+	$('#title').click(function(){
+		window.location.reload(true);	
+	});
+
+	$('#login_area').mouseover(function(){
+		$('#login_slider').css({'visibility':'visible'});
+	}).mouseout(function(){
+		$('#login_slider').css({'visibility':'hidden'});
+	});
+
+	$('#settings').click(function(){
+			$('#settings_slider').css({'visibility':'visible'})
+	}).children('#settings_slider').mouseleave(function(){
+		$('#settings_slider').css({'visibility':'hidden'});	
+	}).blur(function(){
+		$('#settings_slider').css({'visibility':'hidden'});	
+	});
+
+	$('input[type="text"], input[type="password"]').focus(function(){
+		// on focus if value is default
+		if($(this).val()==$(this).attr('alt')){
+			// remove value and set color to black
+			$(this).val('').css({'color':'black'});
+		}
+	}).blur(function(){
+		// When input has lost focus and is empty
+		if($(this).val()==''){
+			// set it's value to this input's alt attribute,
+			var alt = $(this).attr('alt');
+			// and it's color back to default gray.
+			$(this).val(alt).css({'color':'gray'});
+		// Otherwise leave the color black, because it's in use and not default.
+		}else{$(this).css({'color':'black'});}
+	});
+
 // queued
 	$('#body_panel_links_queued').click(function(){
 		$('#queued').css({'visibility':'visible'});
