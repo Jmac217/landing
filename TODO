@@ -3,6 +3,8 @@ priority => queue, jot, log, style, features
 
 __Queue__
 
+Clicking on #tracker_header_name should produce a dropdown with all projects to select from
+
 in JSON: rename 'readme' to 'documentation', and add type and/or title. This will allow for multiple pages of reading material.
 - also add a list of document_types in the dictionary json
 - I think all that's left is queued.php and index.css. Some javascript might still need changed too.
@@ -20,7 +22,7 @@ Project will be chosen via a dropdown, like what's in the inventory. It's marked
 
 #tracker_documentation CSS will need some reorganization to include a header after the javascript is set up.
 - This header will be where different documents can be cycled through too.
--- I don't know yet whether it will be via selecting a category from a dropdown menu and cycling through by type, or if it would be efficient enough to allow the entirety of the documentation to populate a sing listing. 
+-- I don't know yet whether it will be via selecting a category from a dropdown menu and cycling through by type, or if it would be efficient enough to allow the entirety of the documentation to populate a single listing. 
 - This header will include links to all of the separated functionality: collapse into ~notes_large_view~ of into ~notes_list_view~
 ! Think of the tracker as two separate windows: a documentation pane and a notes pane, each with their own headers and views.
 
