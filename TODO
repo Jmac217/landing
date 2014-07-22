@@ -1,6 +1,5 @@
 priority => queue, jot, log, style, features
 
-
 __Queue__
 
 Clicking on #tracker_header_name should produce a dropdown with all projects to select from
@@ -26,6 +25,9 @@ Project will be chosen via a dropdown, like what's in the inventory. It's marked
 - This header will include links to all of the separated functionality: collapse into ~notes_large_view~ of into ~notes_list_view~
 ! Think of the tracker as two separate windows: a documentation pane and a notes pane, each with their own headers and views.
 
+__Header__
+
+The login will be populated with the functionality of Customers, almost entirely. The login system will not change but the pages loaded will get passed extra parameters from $_SESSION
 
 __Panel__
 

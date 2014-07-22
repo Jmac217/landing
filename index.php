@@ -25,7 +25,22 @@
 			</div>
 			<div id='user_data'></div>
 			<div id='settings'>
-				<div id='settings_slider' class='box bezzle'></div>
+				<div id='settings_slider' class='box bezzle'>
+					<a class='settings_slider_li'>0</a>
+					<a class='settings_slider_li'>1</a>
+					<a class='settings_slider_li'>2</a>
+					<a class='settings_slider_li'>3</a>
+					<a class='settings_slider_li'>4</a>
+					<a class='settings_slider_li'>5</a>
+					<a class='settings_slider_li'>6</a>
+					<a class='settings_slider_li'>7</a>
+					<a class='settings_slider_li'>8</a>
+					<a class='settings_slider_li'>9</a>
+					<a class='settings_slider_li'>10</a>
+					<a class='settings_slider_li'>11</a>
+					<a class='settings_slider_li'>12</a>
+					<a class='settings_slider_li'>13</a>
+				</div>
 			</div>
 		</div>
 		<div id='doc'>

@@ -1,0 +1,22 @@
+project
+	id
+	name
+	documentation
+		type
+		title
+		body
+		edited
+		date
+		author
+	todo
+		id
+		headline
+		date
+		notes 
+			body 
+			date 
+		priority_index
+			type
+			workload
+			importance
+			due_date
