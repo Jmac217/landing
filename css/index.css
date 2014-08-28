@@ -30,7 +30,7 @@ a:hover{color:#222;text-decoration:none;cursor:pointer;}
 input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:120%;}
 
 /*#title{cursor:pointer;color:white;}*/
-#user_panel{position:absolute;top:0px;left:0px;height:50px;width:100%;background-image:url('../res/top_panel.png');border-bottom:solid 1px black;}
+#user_panel{position:relative;top:0px;left:0px;height:50px;width:100%;background-image:url('../res/top_panel.png');border-bottom:solid 1px black;}
 	#login_area{position:absolute;top:10px;right:5px;height:30px;width:500px;background-color:blue;}
 		#login_user{position:absolute;left:0px;height:100%;width:50%;}
 		#login_pass{position:absolute;right:0px;height:100%;width:50%;}
@@ -48,7 +48,7 @@ input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-
 
 #extra_footer{position:absolute;bottom:0px;left:0px;height:25px;width:100%;background-color:#ccc;}
 
-#doc{position:absolute;margin:auto;top:0px;bottom:0px;left:0px;right:0px;width:1300px;height:650px;}
+#doc{position:relative;margin:auto;top:50px;bottom:0px;left:0px;right:0px;width:1300px;height:650px;}
 
 	#panel{position:absolute;left:0px;top:0px;height:100%;width:20%;background-color:#CCC;border-top-left-radius:10px;overflow-y:auto;overflow-x:hidden;}
 		#webapps{position:relative;top:0px;left:0px;width:100%;}
