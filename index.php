@@ -1,8 +1,3 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <!-- 
     Landing Zone: A project management board
     Copyright (C) 2014 Jordan Elder
@@ -20,7 +15,11 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<html>
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/index.css' />
 		<link rel='shortcut icon' href='res/pipe-blend.png' />
@@ -33,6 +32,7 @@
 	<body>
 		<div id='user_panel'>
 			<div id='login_area'>
+				<!-- add 'placeholders' to inputs -->
 				<input id='login_user' type='text' value='User' alt='User' />
 				<input id='login_pass' type='password' value='Password' alt='Password' />
 				<div id='login_slider' class='box bezzle'>
@@ -137,6 +137,8 @@
 				
 				<div id='body'>
 				
+					<!-- links on the right side of the page, will be generated from a JSON file in the future -->
+					<!-- ids are too implicit, maybe use a class here if possible -->
 					<div id='body_panel'>
 						<span id='body_panel_links_queued'>Project Queue</span>
 						<span id='body_panel_links_jot'>Add a Note</span>
@@ -145,11 +147,18 @@
 					</div>
 
 					<div id='home'>
-						<span id='marquee'><marquee><!-- Rss Stuff from "newsbeard" --></marquee></span>
+
+						<span id='marquee'>
+							<marquee></marquee>
+							<!-- Will run RSS feed, probably from "newsbeard" at NewsBeard.com (example RSS : http://feeds.feedburner.com/Newsbeard?format=xml) -->
+							<!-- - In the meantime it would be nice to compile a personalized RSS list -->
+							<!-- - This feed may be better suited to reside in the footer if something better doesn't come along to replace it -->
+						</span>
+
 						<!-- application panel -->
 						<!-- - pop this up a level, to be accessible from any of the pages -->
-						<div id='queued'><?php /*include 'php/queued.php';*/ ?>
-						
+						<div id='queued'>
+							<?php /*include 'php/queued.php';*/ ?> <!-- Queued used to be written in PHP, it's still included and available, but being transitioned out -->
 							<div id='tracker'>
 								<div id='tracker_header'>
 									<div id='tracker_header_name'></div>
@@ -158,8 +167,8 @@
 								<div id='tracker_body'>
 									<div id='tracker_top'>
 										<div id='tracker_documentation'>
-											<div id='tracker_documentation_collapse'>^</div>
-											<div id='tracker_documentation_expand'>v</div>
+											<div id='tracker_documentation_collapse'>&#9650;</div>
+											<div id='tracker_documentation_expand'>&#9660;</div>
 											<div id='tracker_documentation_head'>
 												<div id='tracker_documentation_head_title'>Documentation</div>
 												<div id='tracker_documentation_head_type'>readme</div>
@@ -184,10 +193,10 @@
 											</div>
 											<div id='tracker_notes'>
 												<div id='tracker_notes_left'>
-													<div id='tracker_notes_left_text'><</div>
+													<div id='tracker_notes_left_text'>&#9664;</div>
 												</div>
 												<div id='tracker_notes_right'>
-													<div id='tracker_notes_right_text'>></div>
+													<div id='tracker_notes_right_text'>&#9654;</div>
 												</div>
 												<div id='tracker_notes_body'></div>
 												<div id='tracker_notes_foot'>

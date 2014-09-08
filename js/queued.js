@@ -8,8 +8,9 @@ $('#tracker_documentation_collapse').click(function(){
 	$('#tracker_notes_body').animate({'height':'330px'});
 	$('#tracker_documentation_collapse').css({'visibility':'hidden'});
 	$('#tracker_documentation_expand').css({'visibility':'visible'});
-	$('#tracker_top').css({'visibility':'visible'});
+	$('#tracker_top').css({'visibility':'hidden'});
 	setTimeout(function(){
+		$('#tracker_documentation_head').css({'visibility':'hidden'});
 		$('#tracker_documentation_body').css({'visibility':'hidden'});
 	},370);
 });
@@ -20,7 +21,8 @@ $('#tracker_documentation_expand').click(function(){
 	$('#tracker_notes_body').animate({'height':'95px'});
 	$('#tracker_documentation_expand').css({'visibility':'hidden'});
 	$('#tracker_documentation_collapse').css({'visibility':'visible'});
-	$('#tracker_top').css({'visibility':'hidden'});
+	$('#tracker_top').css({'visibility':'visible'});
+	$('#tracker_documentation_head').css({'visibility':'visible'});
 	$('#tracker_documentation_body').css({'visibility':'visible'});
 });
 
@@ -50,9 +52,9 @@ $.getJSON('json/database.json',function(json){
 	var notes_cap = (todo.notes.length)-1;// minus 1 for index of 0
 	var priority_index_cap = todo.priority_index.length;
 
-	$('#tracker_header_name').html(project.name);
+	$('#tracker_header_name').html(project.name+'<span class="dropclick">&#9660;</span>');
 	$('#tracker_header_id').html('Project ID: '+project.id);
-	$('#tracker_documentation_body').html(documentation.body);
+	$('#tracker_documentation_body').html(documentation.body); // JSON will point to .md file location
 	$('#tracker_documentation_edited').html(documentation.edited);
 	$('#tracker_documentation_date').html(documentation.date);
 	$('#tracker_documentation_author').html(documentation.author);
