@@ -1,5 +1,7 @@
 ## Meta
 
+	DON'T DELETE index.css or index.php, they contain the global header/footer
+
 	* Knockout.JS will be added to remove, at least most of the, jQuery CSS calls.
 		- data-bindings will allow for much more responsive associations for both these CSS calls and JSON value tracking.
 		- editing markdown files in-line would be a very nice feature to experiment with too while implementing this library.
@@ -26,6 +28,8 @@
 	
 	> This needs renamed to reflect its scope
 
+	> HOW COOL WOULD IT BE TO GET PANEL JSON WORKING TONIGHT? // 10-14-14
+
 	* Making things less static
 		- generate listings with JSON -- Webapps, Modules, Scripts, and Databases and even Links Panel.
 		- the idea is to let the parser be generic enough to handle each individually and separately
@@ -51,6 +55,8 @@
 	
 	> user panel and the bottom footer should be hidden until the doc can be fixed	
 	
+	!!! user_panel and global_footer have been excluded from refactorization, pull from original indexes when the time comes!
+
 	#doc : representational
 	.--------------------------
 	| title > has elemental style

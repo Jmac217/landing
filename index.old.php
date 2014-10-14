@@ -21,7 +21,7 @@
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
-		<link rel='stylesheet' type='text/css' href='css/index.rework.css' />
+		<link rel='stylesheet' type='text/css' href='css/index.css' />
 		<link rel='shortcut icon' href='res/pipe-blend.png' />
 		<script type='text/javascript' src='js/jquery1.js'></script>
 		<script type='text/javascript' src='js/globals.js'></script>
@@ -30,21 +30,32 @@
 		<title>Landing Zone</title>
 	</head>
 	<body>
+		<div id='user_panel'>
+			<div id='login_area'>
+				<!-- add 'placeholders' to inputs -->
+				<input id='login_user' type='text' value='User' alt='User' />
+				<input id='login_pass' type='password' value='Password' alt='Password' />
+				<div id='login_slider' class='box bezzle'>
+					<span id='login_forgotten'>I have forgotten my <span id='login_forgotten_username'>Username</span> or <span id='login_forgotten_password'>Password</span></span>
+					<input id='login_submit' type='button' value='Login'/>
+				</div>
+			</div>
+			<div id='user_data'></div>
+			<div id='settings'>
+				<div id='settings_slider' class='box bezzle'>
+					<!-- generated with javascript -->
+					<a class='settings_slider_li'>1</a>
+					<a class='settings_slider_li'>2</a>
+					<a class='settings_slider_li'>3</a>
+				</div>
+			</div>
+		</div>
 		<div id='doc'>
 			<span id='title'>Landing Zone</span>
-			<div id='header' class='border-box'>
-				<span id='time'><?php date_default_timezone_set("America/Chicago"); echo date("g:ia"); ?></span>
-				<span id='date'><?php echo date("F d, Y"); ?></span>
-				<span id='git' class='gitlinks'>
-					GitHub Repositories
-					<br />
-					<a href='https://github.com/Jmac217/'>Jmac217</a> / 
-					<a href='https://github.com/codefrontdesign/'>Codefront</a>
-				</span>
-			</div>
 			<div id='panel'>
 				<div id='webapps'>
 					<p class='title'>Webapps</p>
+					<!-- json/webapps.json -->
 					<ul>
 						<li>
 								<a href='../inventory/'>Inventory</a>
@@ -71,6 +82,7 @@
 				</div>
 				<div id='modules'>
 					<p class='title'>Modules</p>
+					<!-- json/modules.json -->
 					<ul>
 						<li>
 								<a href='./php/Queued/'>Queued</a>
@@ -87,31 +99,62 @@
 					<ul>
 				</div>
 				<span id='scripts'>
+					<!-- json/scripts.json -->
 					<p class='title'><a href='script' class='headerLink'>Scripts<a></p>
 				</span>
 				<div id='databases'>
 					<p class='title'>Databases</p>
+					<!-- json/databases.json -->
 					<ul>
 						<li>
 							<a href='./phpmyadmin/'>Localhost</a> / <a href=''>Ubuntu</a> / <a href=''>GoDaddy</a>
-						</li>
+						</li><!-- localhost will need to become a dropdown. Listing for  "Work" and "Home", maybe even "Other" that pops up with a IP entry field. Why? Why not. -->
 					</ul>
 				</div>
 			</div>
+			<!-- /panel -->
+			
 			<div id='pages'>
+			
+				<div id='header'>
+					<!-- make date from javascript -->
+					<span id='time'><?php date_default_timezone_set("America/Chicago"); echo date("g:ia"); ?></span>
+					<span id='date'><?php echo date("F d, Y"); ?></span>
+					<span id='git' class='gitlinks'>
+						GitHub Repositories
+						<br />
+						<a href='https://github.com/Jmac217/'>Jmac217</a> / <!-- these are going to be hover-dropdowns containing all urls for the github account -->
+						<a href='https://github.com/codefrontdesign/'>Codefront</a>
+					</span>
+				</div>
+				
 				<div id='body'>
+				
+					<!-- links on the right side of the page, will be generated from a JSON file in the future -->
+					<!-- ids are too implicit, maybe use a class here if possible -->
 					<div id='body_panel'>
+						<!-- should be broken into a class of 'body_panel_links' and the id of *module* -->
 						<span id='body_panel_links_queued'>Project Queue</span>
 						<span id='body_panel_links_jot'>Add a Note</span>
 						<span id='body_panel_links_lucent'>Server Status</span>
 						<span id='body_panel_links_bugger'>Bug Tracker</span>
 					</div>
+
 					<div id='home'>
+
 						<span id='marquee'>
 							<marquee></marquee>
+							<!-- Will run RSS feed, probably from "newsbeard" at NewsBeard.com (example RSS : http://feeds.feedburner.com/Newsbeard?format=xml) -->
+							<!-- - In the meantime it would be nice to compile a personalized RSS list -->
+							<!-- - This feed may be better suited to reside in the footer if something better doesn't come along to replace it -->
 						</span>
+
+						<!-- application panel -->
+						<!-- - pop this up a level, to be accessible from any of the pages -->
+						<!-- ! modules have been imported into index for the time being -->
 						<div id='queued'>
-							<?php /*include 'php/queued.php';*/ ?>
+							<?php /*include 'php/queued.php';*/ ?> <!-- Queued used to be written in PHP, it's still included and available, but being transitioned out -->
+							<!-- tracker ids are too verbose -->
 							<div id='tracker'>
 								<div id='tracker_header'>
 									<div id='tracker_header_name'></div>
@@ -160,15 +203,17 @@
 									</div>
 								</div>
 								<div id='tracker_footer'>
+									<!-- nothing so far -->
 								</div>
 							</div>
 						
 						</div>
-						<div id='jot'><?php //include 'php/jot.php'; ?></div>
-						<div id='lucent'><?php //include 'php/lucent.php'; ?></div>
-						<div id='bugger'><?php //include 'php/bugger.php'; ?></div>
+						<div id='jot'><?php include 'php/jot.php'; ?></div>
+						<div id='lucent'><?php include 'php/lucent.php'; ?></div>
+						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
 					</div>
 					
+					<!-- application view exchange -->
 					<div class='queued'></div>
 					<div class='jot'></div>
 					<div class='lucent'></div>
@@ -199,9 +244,10 @@
 							<div id='bugger_footer'><span id='bugger_footer_feedback'></span></div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
-			<div id='footer' class='border-box'>
+			<div id='footer'>
 				<span id='quick_links'>
 					<span class='gitlinks'>
 						<a class='accepted' href='http://www.codefrontdesign.com/'>.Codefront</a> | <a class='accepted' href='http://www.godaddy.com/'>GoDaddy</a>
@@ -209,5 +255,6 @@
 				</span>
 			</div>
 		</div>
+		<div id='extra_footer'></div>
 	</body>
 </html>
