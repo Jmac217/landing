@@ -1,1 +1,1 @@
-gvim -S C:\xampp\htdocs\landing\landing.vim
+gvim -S C:\xampp\htdocs\landing_refactored\landing.vim

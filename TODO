@@ -1,70 +1,141 @@
-priority => queue, jot, log, style, features
+## Meta
 
-__Queue__
+	* Knockout.JS will be added to remove, at least most of the, jQuery CSS calls.
+		- data-bindings will allow for much more responsive associations for both these CSS calls and JSON value tracking.
+		- editing markdown files in-line would be a very nice feature to experiment with too while implementing this library.
 
-Clicking on #tracker_header_name should produce a dropdown with all projects to select from
+	* Larger #doc/#view window?
+		> When designing the page, it wasn't intended to be fancy; it was certainly not designed to be an all-encompassing workflow management solution. The queue view was added ad-hoc, and built inside of the limited space, which has been mostly good, but also limiting.
+		
 
-in JSON: rename 'readme' to 'documentation', and add type and/or title. This will allow for multiple pages of reading material.
-- also add a list of document_types in the dictionary json
-- I think all that's left is queued.php and index.css. Some javascript might still need changed too.
+## user_panel
 
-Most of the PHP is being rewritten in Javascript now.
-- continue here
-
-When the README collapses, the notes section should expand and possibly become vertically scrollable. I'll have to see how well that ends up working.
-- The left-right cycle should be implemented at least.
-- tracker*{readme,collapse} will need set to be invisible, it seems, when swapping between separate panel views
-
-Project will be chosen via a dropdown, like what's in the inventory. It's marked with a 'v'
-- This could be added at any time
-- For the approach I'm taking I'm working from the inside out, which is to say starting with the notes alternation, then the documentation, then the projects.
-
-#tracker_documentation CSS will need some reorganization to include a header after the javascript is set up.
-- This header will be where different documents can be cycled through too.
--- I don't know yet whether it will be via selecting a category from a dropdown menu and cycling through by type, or if it would be efficient enough to allow the entirety of the documentation to populate a single listing. 
-- This header will include links to all of the separated functionality: collapse into ~notes_large_view~ of into ~notes_list_view~
-! Think of the tracker as two separate windows: a documentation pane and a notes pane, each with their own headers and views.
-
-__Header__
-
-The login will be populated with the functionality of Customers, almost entirely. The login system will not change but the pages loaded will get passed extra parameters from $_SESSION
-
-__Panel__
-
-I want to slim down the #panel; maybe to half the width, but allow it to expand by clicking a button; I've decided against the widening thing.
-- moving modules to fit in to the lengthened list
-
-To make things less static, it would be a good idea to generate listings with JSON -- Webapps, Modules, Scripts, and Databases and even Links Panel.
-- the idea is to let the parser be generic enough to handle each individually and separately
-! to start in this process I've moved each list to its own temporary html file within the json folder. This will help in determining the final result of each json file.
-
-Add specialized fields to note queue?
--	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
-* Create a login for this, otherwise it's really stupid to leave it online for too long.
+	> I'm unsure of the naming scheme right now, but I like how the damned thing turned out.
+	
+	The user panel only needs hooked up to a backend and database right now, the javascript and all works, and the divs are set up to handle user information.
+		- The login system will actually be pulled from the CustomersDB
+		- There will be a configuration(s).json created that will continuously update session variables. You'll always be right where you left off when you closed your browser.
 
 
-__Logging__
+## Header
 
-Pull the inventory logger into global scope.
-- For modules add log.json with urls to specific logs to include, this allows for expansion as long as the logger is generic enough to handle everything.
-- Output is to plain text with my personal styling, so maybe write a schema for others to edit?
--	Results are shown in either HTML or plain-text
+	The login will be populated with the functionality of Customers, almost entirely. The login system will not change but the pages loaded will get passed extra parameters from $_SESSION, I kind of hate this.
 
 
-__User Panel__
+## (body_)panel
+	
+	> This needs renamed to reflect its scope
 
-I'm unsure of the naming scheme right now, but I like how the damned thing turned out.
-The user panel only needs hooked up to a backend and database right now, the javascript and all works, and the divs are set up to handle user information.
-- The login system will actually be pulled from the CustomersDB
--- There will be a configuration(s).json created that will continuously update session variables. You'll always be right where you left off when you closed your browser. This file plus a cookie to remain logged in will be sweeet.
--- For the logins themselves I think I'll create something like the following hierarchy: profiles -> {shared,user} -> *.json
+	* Making things less static
+		- generate listings with JSON -- Webapps, Modules, Scripts, and Databases and even Links Panel.
+		- the idea is to let the parser be generic enough to handle each individually and separately
+		! to start in this process I've moved each list to its own temporary html file within the json folder. This will help in determining the final result of each json file.
 
-__Server Status__
+	* Add specialized fields to note queue?
+		-	Project Name / Contract / Business - Name, email, phone / Due date / TODO / Quick Notes
+		* Create a login for this, otherwise it's really stupid to leave it online for too long.
+		
+	* Dropdown class
+		To be used in the settings and project selection
+		
 
-This will be almost exactly the same system as what was used in Jmac217.net, if I can even find that code-base that is.
+## Document
+
+	* All HTML in-line styles MUST be removed! This includes elemental styles and attributed styles.
+		- CSS will handle all matters relative to style
+
+	! pages is equivalent to an HTML body element, and so should be rendered to reflect that.
+		- currently #pages is contained to its placement in #doc
+		- #doc should adhere to #pages' standards
+		- divisions and spanners should be positionally relative
+	
+	> user panel and the bottom footer should be hidden until the doc can be fixed	
+	
+	#doc : representational
+	.--------------------------
+	| title > has elemental style
+	| = = = = = = = = = = 
+	| panel
+	| - webapps > Generate with JSON : {type,name,source,path}
+	| - > ul . li . a > replace with li.load_link-type functionality
+	| - modules
+	| - > ul ...
+	| - scripts
+	| - > ul ...
+	| - databases
+	| - > ul ...
+	| = = = = = = = = = = 
+	| pages
+	| - header
+	| - body
+	| - - body_panel
+	| - - - [ body_panel_links_... ]
+	| - - home
+	| - - - #queued
+	| - - - - tracker
+	| - - - - - tracker_header
+	| - - - - - - tracker_{project information}
+	| - - - - - tracker_body
+	| - - - - - - tracker_top
+	| - - - - - - - tracker_{documentation}
+	| - - - - - - tracker_bottom
+	| - - - - - - - tracker_{todo}
+	| - - - - - tracker_footer
+	| - - - #jot
+	| - - - #lucent
+	| - - - #bugger
+	| - - - - ...
+	| - .queued
+	| - .jot
+	| - .lucent
+	| - .bugger
+	| = = = = = = = = = = 
+	| footer
+	`--------------------------
+	
+
+## Queue
+
+	 * Refactor Queued view
+
+		Clicking on #tracker_header_name should produce a dropdown with all projects to select from
+
+		When the README collapses, the notes section should expand and possibly become vertically scrollable. I'll have to see how well that ends up working.
+		- The left-right cycle should be implemented at least.
+		- tracker*{readme,collapse} will need set to be invisible, it seems, when swapping between separate panel views
+
+		#tracker_documentation CSS will need some reorganization to include a header after the javascript is set up.
+		- This header will be where different documents can be cycled through too.
+		-- I don't know yet whether it will be via selecting a category from a dropdown menu and cycling through by type, or if it would be efficient enough to allow the entirety of the documentation to populate a single listing. 
+		- This header will include links to all of the separated functionality: collapse into ~notes_large_view~ of into ~notes_list_view~
+		! Think of the tracker as two separate windows: a documentation pane and a notes pane, each with their own headers and views.
+
+	* Implement all JSON fields
+
+		in JSON: rename 'readme' to 'documentation', and add type and/or title. This will allow for multiple pages of reading material.
+		- also add a list of document_types in the dictionary json
+		- I think all that's left is queued.php and index.css. Some javascript might still need changed too.
+
+
+## Logging
+
+	Pull the inventory logger into global scope.
+		- For modules add log.json with urls to specific logs to include, this allows for expansion as long as the logger is generic enough to handle everything.
+		- Output is to plain text with my personal styling, so maybe write a schema for others to edit?
+		-	Results are shown in either HTML or plain-text
+
+	For the logins themselves I think I'll create something like the following hierarchy: profiles -> {shared,user} -> *.json
+	
+
+## Server Status
+
+	This will be almost exactly the same system as what was used in Jmac217.net, if I can even find that code-base that is.
+	
 
 == Thoughts ==
 
-come up with a simple layout for the queue view
-- Style is a minor necessity at this point; the idea is to display the 'project' page of priority in the view.
-! the layout needs to be defined before continuing
+	Fix footer placement
+
+	come up with a simple layout for the queue view
+		- Style is a minor necessity at this point; the idea is to display the 'project' page of priority in the view.
+		! the layout needs to be defined before continuing

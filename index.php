@@ -43,31 +43,19 @@
 			<div id='user_data'></div>
 			<div id='settings'>
 				<div id='settings_slider' class='box bezzle'>
-					<a class='settings_slider_li'>0</a>
+					<!-- generated with javascript -->
 					<a class='settings_slider_li'>1</a>
 					<a class='settings_slider_li'>2</a>
 					<a class='settings_slider_li'>3</a>
-					<a class='settings_slider_li'>4</a>
-					<a class='settings_slider_li'>5</a>
-					<a class='settings_slider_li'>6</a>
-					<a class='settings_slider_li'>7</a>
-					<a class='settings_slider_li'>8</a>
-					<a class='settings_slider_li'>9</a>
-					<a class='settings_slider_li'>10</a>
-					<a class='settings_slider_li'>11</a>
-					<a class='settings_slider_li'>12</a>
-					<a class='settings_slider_li'>13</a>
 				</div>
 			</div>
 		</div>
 		<div id='doc'>
-		
 			<span id='title'><i>Landing Zone</i></span>
-
-			
 			<div id='panel'>
 				<div id='webapps'>
 					<p class='title'>Webapps</p>
+					<!-- json/webapps.json -->
 					<ul>
 						<li>
 								<a href='../inventory/'>Inventory</a>
@@ -94,6 +82,7 @@
 				</div>
 				<div id='modules'>
 					<p class='title'>Modules</p>
+					<!-- json/modules.json -->
 					<ul>
 						<li>
 								<a href='./php/Queued/'>Queued</a>
@@ -110,10 +99,12 @@
 					<ul>
 				</div>
 				<span id='scripts'>
+					<!-- json/scripts.json -->
 					<p class='title'><a href='script' class='headerLink'>Scripts<a></p>
 				</span>
 				<div id='databases'>
 					<p class='title'>Databases</p>
+					<!-- json/databases.json -->
 					<ul>
 						<li>
 							<a href='./phpmyadmin/'>Localhost</a> / <a href=''>Ubuntu</a> / <a href=''>GoDaddy</a>
@@ -126,6 +117,7 @@
 			<div id='pages'>
 			
 				<div id='header'>
+					<!-- make date from javascript -->
 					<span id='time'><?php date_default_timezone_set("America/Chicago"); echo date("g:ia"); ?></span>
 					<span id='date'><?php echo date("F d, Y"); ?></span>
 					<span id='git' class='gitlinks'>
@@ -140,6 +132,7 @@
 					<!-- links on the right side of the page, will be generated from a JSON file in the future -->
 					<!-- ids are too implicit, maybe use a class here if possible -->
 					<div id='body_panel'>
+						<!-- should be broken into a class of 'body_panel_links' and the id of *module* -->
 						<span id='body_panel_links_queued'>Project Queue</span>
 						<span id='body_panel_links_jot'>Add a Note</span>
 						<span id='body_panel_links_lucent'>Server Status</span>
@@ -157,8 +150,10 @@
 
 						<!-- application panel -->
 						<!-- - pop this up a level, to be accessible from any of the pages -->
+						<!-- ! modules have been imported into index for the time being -->
 						<div id='queued'>
 							<?php /*include 'php/queued.php';*/ ?> <!-- Queued used to be written in PHP, it's still included and available, but being transitioned out -->
+							<!-- tracker ids are too verbose -->
 							<div id='tracker'>
 								<div id='tracker_header'>
 									<div id='tracker_header_name'></div>
@@ -217,7 +212,7 @@
 						<div id='bugger'><?php include 'php/bugger.php'; ?><!--* This is the location for the actual landing bugger - bugger's view *--></div>
 					</div>
 					
-					<!-- application exchange -->
+					<!-- application view exchange -->
 					<div class='queued'></div>
 					<div class='jot'></div>
 					<div class='lucent'></div>

@@ -87,7 +87,7 @@ set window=59
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd C:\xampp\htdocs\landing
+cd C:\xampp\htdocs\landing_refactored
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -319,10 +319,10 @@ exe s:l
 normal! zt
 20
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\TODO
+edit C:\xampp\htdocs\landing_refactored\TODO
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -431,10 +431,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\README.md
+edit C:\xampp\htdocs\landing_refactored\README.md
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -543,10 +543,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\workflowPrototyping.txt
+edit C:\xampp\htdocs\landing_refactored\workflowPrototyping.txt
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -655,10 +655,10 @@ exe s:l
 normal! zt
 17
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\COPYING
+edit C:\xampp\htdocs\landing_refactored\COPYING
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -767,10 +767,10 @@ exe s:l
 normal! zt
 1
 normal! 021|
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\index.php
+edit C:\xampp\htdocs\landing_refactored\index.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -885,7 +885,7 @@ normal! zt
 normal! 0
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\js\index.js
+edit C:\xampp\htdocs\landing_refactored\js\index.js
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -994,10 +994,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\js\queued.js
+edit C:\xampp\htdocs\landing_refactored\js\queued.js
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -1090,7 +1090,7 @@ if &syntax != 'javascript'
 setlocal syntax=javascript
 endif
 setlocal tabstop=2
-setlocal tags=C:/xampp/htdocs/landing/.git/javascript.tags,C:/xampp/htdocs/landing/.git/tags,./tags,tags
+setlocal tags=C:/xampp/htdocs/landing_refactored/.git/javascript.tags,C:/xampp/htdocs/landing_refactored/.git/tags,./tags,tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
@@ -1106,10 +1106,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\js\globals.js
+edit C:\xampp\htdocs\landing_refactored\js\globals.js
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -1202,7 +1202,7 @@ if &syntax != 'javascript'
 setlocal syntax=javascript
 endif
 setlocal tabstop=2
-setlocal tags=C:/xampp/htdocs/landing/.git/javascript.tags,C:/xampp/htdocs/landing/.git/tags,./tags,tags
+setlocal tags=C:/xampp/htdocs/landing_refactored/.git/javascript.tags,C:/xampp/htdocs/landing_refactored/.git/tags,./tags,tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
@@ -1218,10 +1218,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\jot.php
+edit C:\xampp\htdocs\landing_refactored\php\jot.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -1334,10 +1334,10 @@ exe s:l
 normal! zt
 2
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\queued.php
+edit C:\xampp\htdocs\landing_refactored\php\queued.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -1450,10 +1450,10 @@ exe s:l
 normal! zt
 33
 normal! 012|
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\json\database.json
+edit C:\xampp\htdocs\landing_refactored\json\database.json
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -1546,7 +1546,7 @@ if &syntax != 'javascript'
 setlocal syntax=javascript
 endif
 setlocal tabstop=2
-setlocal tags=C:/xampp/htdocs/landing/.git/javascript.tags,C:/xampp/htdocs/landing/.git/tags,./tags,tags
+setlocal tags=C:/xampp/htdocs/landing_refactored/.git/javascript.tags,C:/xampp/htdocs/landing_refactored/.git/tags,./tags,tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
@@ -1562,10 +1562,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\bugger.php
+edit C:\xampp\htdocs\landing_refactored\php\bugger.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -1678,10 +1678,10 @@ exe s:l
 normal! zt
 13
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\send_report.php
+edit C:\xampp\htdocs\landing_refactored\php\send_report.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -1794,10 +1794,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\lucent.php
+edit C:\xampp\htdocs\landing_refactored\php\lucent.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -1910,10 +1910,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\json\server_status.json
+edit C:\xampp\htdocs\landing_refactored\json\server_status.json
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -2006,7 +2006,7 @@ if &syntax != 'javascript'
 setlocal syntax=javascript
 endif
 setlocal tabstop=2
-setlocal tags=C:/xampp/htdocs/landing/.git/javascript.tags,C:/xampp/htdocs/landing/.git/tags,./tags,tags
+setlocal tags=C:/xampp/htdocs/landing_refactored/.git/javascript.tags,C:/xampp/htdocs/landing_refactored/.git/tags,./tags,tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
@@ -2022,10 +2022,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\logger.php
+edit C:\xampp\htdocs\landing_refactored\php\logger.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -2138,10 +2138,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 argglobal
-edit C:\xampp\htdocs\landing\php\connect.php
+edit C:\xampp\htdocs\landing_refactored\php\connect.php
 onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
 onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
@@ -2254,7 +2254,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd C:\xampp\htdocs\landing
+lcd C:\xampp\htdocs\landing_refactored
 wincmd w
 exe '1resize ' . ((&lines * 36 + 30) / 60)
 exe 'vert 1resize ' . ((&columns * 60 + 118) / 236)
