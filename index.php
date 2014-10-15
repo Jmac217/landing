@@ -42,82 +42,24 @@
 					<a href='https://github.com/codefrontdesign/'>Codefront</a>
 				</span>
 			</div>
-			<div id='panel'>
-				<div id='webapps'>
-					<p class='title'>Webapps</p>
-					<ul>
-						<li>
-								<a href='../inventory/'>Inventory</a>
-						</li>
-						<li>
-								<a href='../MLT/'>MLT</a>
-						</li>
-						<li>
-								<a href='../TBOC/'>TBOC</a>
-						</li>
-						<li>
-								<a href='../Codefront/photo'>Photo</a>
-						</li>
-						<li>
-								<a href='../eto-reworked'>Sundial</a>
-						</li>
-						<li>
-								<a href='http://localhost/Jmac217/Bocce'>Bocce</a>
-						</li>
-						<li>
-								<a href='http://localhost/TBOC/Customers/'>Customer Database</a>
-						</li>
-					<ul>
-				</div>
-				<div id='modules'>
-					<p class='title'>Modules</p>
-					<ul>
-						<li>
-								<a href='./php/Queued/'>Queued</a>
-						</li>
-						<li>
-								<a href='./php/Jot/'>Jot</a>
-						</li>
-						<li>
-								<a href='./php/lucent.php'>Lucent</a>
-						</li>
-						<li>
-								<a href='./php/Bugger/'>Bugger</a>
-						</li>
-					<ul>
-				</div>
-				<span id='scripts'>
-					<p class='title'><a href='script' class='headerLink'>Scripts<a></p>
-				</span>
-				<div id='databases'>
-					<p class='title'>Databases</p>
-					<ul>
-						<li>
-							<a href='./phpmyadmin/'>Localhost</a> / <a href=''>Ubuntu</a> / <a href=''>GoDaddy</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<div id='home_panel' class='border-box'></div>
 			<div id='pages'>
 				<div id='body'>
-					<div id='body_panel'>
-						<span id='body_panel_links_queued'>Project Queue</span>
-						<span id='body_panel_links_jot'>Add a Note</span>
-						<span id='body_panel_links_lucent'>Server Status</span>
-						<span id='body_panel_links_bugger'>Bug Tracker</span>
-					</div>
-					<div id='home'>
+					<div id='body_panel' class='border-box'></div>
+					<div id='view'>
 						<span id='marquee'>
 							<marquee></marquee>
 						</span>
-						<div id='queued'>
+						<div id='_queued'>
 							<?php /*include 'php/queued.php';*/ ?>
 							<div id='tracker'>
-								<div id='tracker_header'>
-									<div id='tracker_header_name'></div>
+								<div id='tracker_header' class='border-box'>
+									<div id='tracker_header_name'>
+										<!-- project dropdown -->	
+									</div>
 									<div id='tracker_header_id'></div>
 								</div>
-								<div id='tracker_body'>
+								<div id='tracker_body' class='border-box'>
 									<div id='tracker_top'>
 										<div id='tracker_documentation'>
 											<div id='tracker_documentation_collapse'>&#9650;</div>
@@ -127,7 +69,7 @@
 												<div id='tracker_documentation_head_type'>readme</div>
 											</div>
 											<div id='tracker_documentation_body'></div>
-											<div id='tracker_documentation_foot'>
+											<div id='tracker_documentation_foot' class='border-box'>
 												<div id='tracker_documentation_edited'></div>
 												<div id='tracker_documentation_date'></div>
 												<div id='tracker_documentation_author'></div>
@@ -136,13 +78,20 @@
 									</div>
 									<div id='tracker_bottom'>
 										<div id='tracker_todo'>
-											<div id='tracker_todo_head'>
+											<div id='tracker_todo_head' class='border-box'>
 												<div id='tracker_todo_id'></div>
 												<div id='tracker_todo_headline'></div>
-												<div id='tracker_todo_date'></div>
 												<div id='tracker_priority_index'>
 													<div id='tracker_priority_index_value'>[Medium]</div>
 												</div>
+												<div id='tracker_todo_date'></div>
+												<div id='tracker_todo_left'>
+													<div id='tracker_todo_left_text'>&#9664;</div>
+												</div>
+												<div id='tracker_todo_right'>
+													<div id='tracker_todo_right_text'>&#9654;</div>
+												</div>
+
 											</div>
 											<div id='tracker_notes'>
 												<div id='tracker_notes_left'>
@@ -152,23 +101,22 @@
 													<div id='tracker_notes_right_text'>&#9654;</div>
 												</div>
 												<div id='tracker_notes_body'></div>
-												<div id='tracker_notes_foot'>
+												<div id='tracker_notes_foot' class='border-box'>
 													<div id='tracker_notes_date'></div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div id='tracker_footer'>
-								</div>
+								<div id='tracker_footer' class='border-box'></div>
 							</div>
-						
 						</div>
-						<div id='jot'><?php //include 'php/jot.php'; ?></div>
-						<div id='lucent'><?php //include 'php/lucent.php'; ?></div>
-						<div id='bugger'><?php //include 'php/bugger.php'; ?></div>
+						<div id='_jot'><?php //include 'php/jot.php'; ?></div>
+						<div id='_lucent'><?php //include 'php/lucent.php'; ?></div>
+						<div id='_bugger'><?php //include 'php/bugger.php'; ?></div>
 					</div>
 					
+					<!--
 					<div class='queued'></div>
 					<div class='jot'></div>
 					<div class='lucent'></div>
@@ -199,6 +147,7 @@
 							<div id='bugger_footer'><span id='bugger_footer_feedback'></span></div>
 						</div>
 					</div>
+					-->
 				</div>
 			</div>
 			<div id='footer' class='border-box'>

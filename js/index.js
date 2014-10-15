@@ -35,6 +35,28 @@ $(document).ready(function(){
 		}else{$(this).css({'color':'black'});}
 	});
 
+
+// Home Panel Generation
+$.getJSON('json/home_panel.json', function(json){
+	$.each(json, function(key, val){
+		$('#home_panel').append("<span id='"+key+"' class='panel_header'>"+val.title+"</span>");
+		$.each(val.urls, function(key, val){
+			$('#home_panel').append("<a class='panel_link' href='"+val.href+"'>"+val.name+"</a>");	
+		});
+	});
+});
+
+
+// Body Panel Generation
+$.getJSON('json/body_panel.json', function(json){
+	$.each(json.body_panel, function(key, val){
+		$('#body_panel').append("<span id='"+key+"' class='body_panel_link'>"+val.title+"</span>");
+	});
+});
+
+
+
+
 // queued
 	$('#body_panel_links_queued').click(function(){
 		$('#queued').css({'visibility':'visible'});

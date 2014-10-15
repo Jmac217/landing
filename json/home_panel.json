@@ -1,36 +1,36 @@
 {
-	"webapps":[{
+	"webapps":{
 		"title":"Webapps",
-		"action":"none",
+		"action":"list",
 		"urls":[{
 			"name":"Inventory",
-			"href":"inventory/",
+			"href":"/inventory/",
 			"type":"link"
 		},{
 			"name":"MLT",
-			"href":"MLT/",
+			"href":"/mlt/",
 			"type":"link"
 		},{
 			"name":"TBOC",
-			"href":"TBOC/",
+			"href":"/tboc/",
 			"type":"link"
 		},{
-			"name":"Photo",
-			"href":"Jmac217/Photo",
+			"name":"Codefront",
+			"href":"/codefront/",
 			"type":"link"
 		},{
-			"name":"Sundial",
-			"href":"TBOC/Sundial",
+			"name":"Jmac217.net",
+			"href":"/jmac217.net/",
 			"type":"link"
 		},{
-			"name":"Bocce",
-			"href":"TBOC/Bocce",
+			"name":"CustomersDB",
+			"href":"/customer/",
 			"type":"link"
 		}]
-	}],
-	"modules":[{
+	},
+	"modules":{
 		"title":"Modules",
-		"action":"none",
+		"action":"list",
 		"urls":[{
 			"name":"Queued",
 			"href":"landing/php/queued/",
@@ -48,31 +48,31 @@
 			"href":"landing/php/bugger/",
 			"type":"link"
 		}]
-	}],
-	"scripts":[{
+	},
+	"scripts":{
 		"title":"Scripts",
-		"action":"link",
+		"action":"self",
 		"urls":[{
 			"name":"",
 			"href":"",
 			"type":""
 		}]
-	}],
-	"databases":[{
+	},
+	"databases":{
 		"title":"Databases",
-		"action":"none",
+		"action":"inline",
 		"urls":[{
 			"name":"Localhost",
 			"href":"http://localhost/phpmyadmin",
-			"type":"inline"
+			"type":"link"
 		},{
 			"name":"Ubuntu",
 			"href":"ubuntu/phpmyadmin",
-			"type":"inline"
+			"type":"link"
 		},{
 			"name":"GoDaddy",
 			"href":"godaddy/phpmyadmin",
-			"type":"inline"
+			"type":"link"
 		}]
-	}]
+	}
 }

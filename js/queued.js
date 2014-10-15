@@ -27,28 +27,43 @@ $('#tracker_documentation_expand').click(function(){
 });
 
 $.getJSON('json/database.json',function(json){
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * There really must be a better way than thunking pointers  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * This whole function is pretending to be an object, and, as*
+	 * such, should be rewritten as such; or structured to act as*
+	 * the functional monster it could become. Either of which   *
+	 * will be much better than what is currently written...     *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * This honestly looks more like bad PHP...                  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	
+	// initial vars
 	var project_init = 0;
 	var documentation_init = 0;
-	var todo_init = 1;
+	var todo_init = 0;
 	var notes_init = 0;
 	var priority_index_init = 0;
 
+	// "pointers" from inital vars
 	var project_num = project_init;
 	var documentation_num = documentation_init;
 	var todo_num = todo_init;
 	var notes_num = notes_init;
 	var priority_index_num = priority_index_init;
 
+	// preparing object from nested starting points
 	var project = json.project[project_num];
 	var documentation = project.documentation[documentation_num];
 	var todo = project.todo[todo_num];
 	var notes = todo.notes[notes_num];
 	var priority_index = todo.priority_index[priority_index_num];
 
+	// capping values from objective length attribute
 	var project_cap = json.project.length;
 	var documentation_cap = project.documentation.length;
-	var todo_cap = project.todo.length;
+	var todo_cap = (project.todo.length)-1;
 	var notes_cap = (todo.notes.length)-1;// minus 1 for index of 0
 	var priority_index_cap = todo.priority_index.length;
 
@@ -66,6 +81,32 @@ $.getJSON('json/database.json',function(json){
 
 	// todo
 	$('#tracker_todo_').click(function(){});
+	$('#tracker_todo_right').click(function(){
+		if(todo_num<todo_cap){
+			++todo_num;
+		}else{
+			todo_num=todo_init;
+		}
+		todo = project.todo[todo_num];
+		$('#tracker_todo_id').html(todo.id+')');
+		$('#tracker_todo_headline').html(todo.headline);
+		$('#tracker_todo_date').html(todo.date);
+		// add priority index
+	});
+
+	$('#tracker_todo_left').click(function(){
+		if(todo_num>0){
+			--todo_num;
+		}else{
+			todo_num=todo_cap;
+		}
+		todo = project.todo[todo_num];
+		$('#tracker_todo_id').html(todo.id+')');
+		$('#tracker_todo_headline').html(todo.headline);
+		$('#tracker_todo_date').html(todo.date);
+		// add priority index
+	});
+
 
 	// notes
 	$('#tracker_notes_right').click(function(){

@@ -1,6 +1,6 @@
 /* Globals */
 
-body{background-color:black;background-image:url(../res/landing3.jpg);background-repeat:no-repeat;background-attachment:fixed;background-position:center;}
+body{background-color:black;background-image:url(../res/landing0.jpg);background-repeat:no-repeat;background-attachment:fixed;background-position:center;}
 p{color:#222;}
 li{color:#333;list-style-type:none;}
 a{text-decoration:none;color:#555;}
@@ -25,28 +25,23 @@ input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-
 		#git{position:absolute;bottom:10px;right:10px;font-size:18px;text-decoration:underline;}
 			#git>a{text-decoration:none;color:#DDD;}
 			#git>a:hover{color:#FFF;}
-	#panel{position:absolute;left:0px;top:0px;height:95%;width:25%;border-right:solid 1px #BBB;}
-		#webapps{position:relative;top:0px;left:0px;width:100%;}
-		#modules{position:relative;top:0px;right:0px;width:100%;}
-		#scripts{position:relative;top:0px;left:0px;width:100%;}
-			.headerLink{text-decoration:underline;color:#222;}
-			.headerLink:hover{text-decoration:underline;color:#222;}
-		#databases{position:absolute;bottom:0px;left:0px;width:100%;}
+	#home_panel{position:absolute;left:0px;top:0px;height:95%;width:25%;border-right:solid 1px #BBB;padding:30px;}
+		.panel_header{position:relative;padding-top:10px;display:block;height:35px;width:100%;font-size:20px;text-decoration:underline;color:#222;}
+		.panel_link{position:relative;display:block;height:25px;width:100%;padding-left:30px;}
 	#pages{position:absolute;top:20%;right:0px;width:75%;height:75%;background-color:green;}
-		#body{position:absolute;top:0px;right:0px;height:80%;width:100%;background-color:#CCC;border-left:solid 1px #AAA;border-top:solid 1px #AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
-			#default{position:absolute;top:20px;left:35%;}
-			#body_panel{position:absolute;top:10px;right:10px;height:93%;width:17%;border:solid 1px #AAA;}
-				#body_panel_links_queued{position:absolute;top:25px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_queued:hover{color:#777;}
-				#body_panel_links_jot{position:absolute;top:75px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_jot:hover{color:#777;}
-				#body_panel_links_lucent{position:absolute;top:125px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_lucent:hover{color:#777;}
-				#body_panel_links_bugger{position:absolute;top:175px;width:100%;color:#222;cursor:pointer;font-size:20px;text-align:center;}#body_panel_links_bugger:hover{color:#777;}
+		.border-box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+		#body{position:absolute;top:0px;right:0px;height:100%;width:100%;background-color:#CCC;border-left:solid 1px #AAA;border-top:solid 1px #AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+			#body_panel{position:absolute;top:2%;right:2%;height:94%;width:20%;border:solid 1px #AAA;color:#222;font-size:20px;text-align:center;padding:20px;}
+				/* .body_panel_link and .panel_header may be interchangeable! */
+				.body_panel_link{position:relative;display:block;height:40px;width:100%;cursor:pointer;}.body_panel_link:hover{color:#777;}
 			#marquee{position:absolute;top:2px;left:2px;width:393px;height:20px;color:#555;}
-			#home{position:absolute;top:0px;left:0px;height:100%;width:80%;overflow-y:auto;}
-				#tracker{position:absolute;top:0px;left:0px;height:519px;width:830px;}
-					#tracker_header{position:absolute;top:0px;left:0px;height:66px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+			#view{position:absolute;top:0px;left:0px;height:100%;width:76%;overflow-y:auto;}
+				/*** tracker is quite verbose right now, it's lookin' like XML! ***/
+				#tracker{position:absolute;top:0px;left:0px;height:100%;width:100%;}
+					#tracker_header{position:absolute;top:0px;left:0px;height:20%;width:100%;border:solid 1px #888;background-color:#AAA;}
 						#tracker_header_name{position:absolute;top:5px;left:10px;font-size:25px;}#tracker_header_name:hover{text-decoration:underline;cursor:pointer;}
 						#tracker_header_id{position:absolute;bottom:5px;left:10px;font-size:12px;}
-					#tracker_body{position:absolute;top:70px;height:412px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;}
+					#tracker_body{position:absolute;top:21%;height:69%;width:100%;border:solid 1px #888;background-color:#AAA;overflow:hidden;}
 						#tracker_top{position:absolute;top:0px;left:0px;height:100%;width:100%;}
 							#tracker_documentation{position:absolute;top:0px;left:0px;height:246px;width:100%;overflow:hidden;}
 								#tracker_documentation_collapse{position:absolute;top:0px;height:15px;width:100%;text-align:center;font-size:8px;-moz-user-select:none;}#tracker_documentation_collapse:hover{background:-moz-linear-gradient(#888, #aaa);opacity:.9;cursor:pointer;}
@@ -55,29 +50,33 @@ input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-
 									#tracker_documentation_head_title{position:absolute;top:0px;left:10px;}
 									#tracker_documentation_head_type{position:absolute;top:0px;right:10px;}
 								#tracker_documentation_body{position:absolute;top:30px;left:0px;height:192px;width:100%;padding:10px;overflow:auto;}
-								#tracker_documentation_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;border-top:solid 1px #888;border-bottom:solid 1px #888;font-size:10px;padding:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+								#tracker_documentation_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;border-top:solid 1px #888;border-bottom:solid 1px #888;font-size:10px;padding:5px}
 									#tracker_documentation_edited{position:absolute;right:200px;}
 									#tracker_documentation_date{position:absolute;right:100px;}
 									#tracker_documentation_author{position:absolute;right:0px;}
 						#tracker_bottom{}
 							#tracker_todo{position:absolute;top:246px;left:0px;height:164px;width:100%;}
-								#tracker_todo_head{position:absolute;top:0px;left:0px;height:30px;width:100%;background-color:#AAA;padding:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;border-bottom:solid 1px #888;}
-									#tracker_todo_id{position:absolute;top:5px;left:5px;}
-									#tracker_todo_headline{position:absolute;left:25px;top:5px;}
-									#tracker_todo_date{position:absolute;top:5px;right:5px;}
-									#tracker_priority_index{position:absolute;top:5px;right:80px;height:20px;width:100px;}
+								#tracker_todo_head{position:absolute;height:30px;width:100%;background-color:#AAA;overflow:hidden;border-bottom:solid 1px #888;}
+									#tracker_todo_id{position:absolute;top:5px;left:15px;}
+									#tracker_todo_headline{position:absolute;left:35px;top:5px;}
+									#tracker_priority_index{position:absolute;top:5px;right:100px;height:20px;width:100px;}
 										#tracker_priority_index{text-align:right;}
+									#tracker_todo_date{position:absolute;top:5px;right:25px;}
+									#tracker_todo_left{position:absolute;top:0px;left:0px;height:100%;width:15px;display:table;}#tracker_todo_left:hover{background:-moz-linear-gradient(right, #aaa, #888);opacity:.9;cursor:pointer;}
+										#tracker_todo_left_text{position:relative;display:table-cell;vertical-align:middle;font-size:8px;-moz-user-select:none;}
+									#tracker_todo_right{position:absolute;top:0px;right:0px;height:100%;width:15px;display:table;}#tracker_todo_right:hover{background:-moz-linear-gradient(left, #aaa, #888);opacity:.9;cursor:pointer;}
+										#tracker_todo_right_text{position:relative;display:table-cell;vertical-align:middle;font-size:8px;-moz-user-select:none;}
 								#tracker_notes{position:absolute;top:30px;left:0px;height:134px;width:100%;background-color:#AAA;}
 									#tracker_notes_left{position:absolute;top:0px;left:0px;height:100%;width:15px;display:table;}#tracker_notes_left:hover{background:-moz-linear-gradient(right, #aaa, #888);opacity:.9;cursor:pointer;}
 										#tracker_notes_left_text{position:relative;display:table-cell;vertical-align:middle;font-size:8px;-moz-user-select:none;}
 									#tracker_notes_right{position:absolute;top:0px;right:0px;height:100%;width:15px;display:table;}#tracker_notes_right:hover{background:-moz-linear-gradient(left, #aaa, #888);opacity:.9;cursor:pointer;}
 										#tracker_notes_right_text{position:relative;display:table-cell;vertical-align:middle;font-size:8px;-moz-user-select:none;}
 									#tracker_notes_body{position:absolute;top:5px;left:15px;right:15px;height:105px;}
-									#tracker_notes_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;padding:5px;border-top:solid 1px #888;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+									#tracker_notes_foot{position:absolute;bottom:0px;left:0px;height:20px;width:100%;background-color:#AAA;padding:5px;border-top:solid 1px #888;}
 										#tracker_notes_date{position:absolute;right:5px;font-size:10px;}
-					#tracker_footer{position:absolute;bottom:0px;left:0px;height:33px;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+					#tracker_footer{position:absolute;top:91%;left:0px;height:9%;width:100%;border:solid 1px #888;background-color:#AAA;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 
-				#queued{position:absolute;top:0px;left:0px;height:100%;width:100%;;visibility:visible;}
+				#_queued{position:absolute;top:0px;left:0px;height:100%;width:100%;;visibility:visible;}
 					.project{position:absolute;left:0px;width:100%;}
 						.project_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
 						.project_priority{position:absolute;height:20px;width:20%;right:20%;background-color:#aaa;}
@@ -89,7 +88,7 @@ input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-
 							.project_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
 						.project_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
 						
-				#jot{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
+				#_jot{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
 					.note{position:absolute;left:0px;width:100%;}
 						.note_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
 						.note_priority{position:absolute;height:20px;width:20%;right:20%;background-color:#aaa;}
@@ -101,7 +100,7 @@ input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-
 							.note_notes{position:absolute;height:40px;width:100%;top:20px;background-color:#bbb;visibility:hidden;overflow:hidden;}
 						.note_timestamp{position:absolute;height:20px;width:100%;top:80px;text-align:right;background-color:#aaa;border-bottom:dotted 1px black;}
 
-				#lucent{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
+				#_lucent{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
 					.server_status{}
 						.server{}
 							.server_status_ping{}
@@ -112,7 +111,7 @@ input{border-style:none;border:solid 1px #333;color:gray;text-align:center;-moz-
 							.server_status_notes{}
 								.server_status_note{}
 						
-				#bugger{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
+				#_bugger{position:absolute;top:0px;left:0px;height:100%;width:100%;overflow-y:auto;visibility:hidden;}
 					.bug{position:absolute;left:0px;width:100%;}
 						.bug_name{position:absolute;height:20px;width:80%;background-color:#aaa;}
 						.bug_status{position:absolute;height:20px;width:20%;right:0px;background-color:#aaa;text-align:right;}
