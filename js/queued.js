@@ -150,14 +150,16 @@ $(document).ready(function(){
 		$('#tracker_header_id').html('Project ID: '+project.id);
 		$('#tracker_documentation_head_title').html(documentation.title);
 		$('#tracker_documentation_head_type').html(documentation.type);
-		$('#tracker_documentation_body').html(documentation.body); // JSON will point to .md file location
+		//$('#tracker_documentation_body').html(documentation.body); // JSON will point to .md file location
+		get_markdown('#tracker_documentation_body',documentation_body);
 		$('#tracker_documentation_edited').html(documentation.edited);
 		$('#tracker_documentation_date').html(documentation.date);
 		$('#tracker_documentation_author').html(documentation.author);
 		$('#tracker_todo_id').html(todo.id+')');
 		$('#tracker_todo_headline').html(todo.headline);
 		$('#tracker_todo_date').html(todo.date);
-		$('#tracker_notes_body').html(notes.body);
+		//$('#tracker_notes_body').html(notes.body);
+		get_markdown('#tracker_notes_body',notes_body);
 		$('#tracker_notes_date').html(notes.date);
 
 		$.each(json.project, function(key, val){
@@ -174,7 +176,8 @@ $(document).ready(function(){
 			documentation = project.documentation[documentation_num];
 			$('#tracker_documentation_head_title').html(documentation.title);
 			$('#tracker_documentation_head_type').html(documentation.type);
-			$('#tracker_documentation_body').html(documentation.body); // JSON will point to .md file location
+			//$('#tracker_documentation_body').html(documentation.body); // JSON will point to .md file location
+			get_markdown('#tracker_documentation_body',documentation_body);
 			$('#tracker_documentation_edited').html(documentation.edited);
 			$('#tracker_documentation_date').html(documentation.date);
 			$('#tracker_documentation_author').html(documentation.author);
@@ -186,7 +189,8 @@ $(document).ready(function(){
 			$('#tracker_todo_id').html(todo.id+')');
 			$('#tracker_todo_headline').html(todo.headline);
 			$('#tracker_todo_date').html(todo.date);
-			$('#tracker_notes_body').html(notes.body);
+			//$('#tracker_notes_body').html(notes.body);
+			get_markdown('#tracker_notes_body',notes_body);
 			$('#tracker_notes_date').html(notes.date);
 
 			debug();
@@ -256,10 +260,12 @@ $(document).ready(function(){
 			notes_num = 0;
 			todo = project.todo[todo_num];
 			notes = todo.notes[notes_num];
+			notes_body = 'project/'+project.name+'/notes/'+todo.headline+'/'+(notes_num+1)+'.md';
 			$('#tracker_todo_id').html(todo.id+')');
 			$('#tracker_todo_headline').html(todo.headline);
 			$('#tracker_todo_date').html(todo.date);
-			$('#tracker_notes_body').html(notes.body);
+			//$('#tracker_notes_body').html(notes.body);
+			get_markdown('#tracker_notes_body',notes_body);
 			$('#tracker_notes_date').html(notes.date);
 			debug();
 			// add priority index
@@ -274,10 +280,12 @@ $(document).ready(function(){
 			notes_num = 0;
 			todo = project.todo[todo_num];
 			notes = todo.notes[notes_num];
+			notes_body = 'project/'+project.name+'/notes/'+todo.headline+'/'+(notes_num+1)+'.md';
 			$('#tracker_todo_id').html(todo.id+')');
 			$('#tracker_todo_headline').html(todo.headline);
 			$('#tracker_todo_date').html(todo.date);
-			$('#tracker_notes_body').html(notes.body);
+			//$('#tracker_notes_body').html(notes.body);
+			get_markdown('#tracker_notes_body',notes_body);
 			$('#tracker_notes_date').html(notes.date);
 			debug();
 			// add priority index
@@ -304,6 +312,7 @@ $(document).ready(function(){
 			});
 			//$('#tracker_notes_body').html(notes.body);
 			$('#tracker_notes_date').html(notes.date);
+			console.log(notes_body);
 			debug();
 		});
 
@@ -318,6 +327,7 @@ $(document).ready(function(){
 			// src : project / <project.name> / <notes.headline> / <notes.(notes_num)+'.md'
 
 			var notes_body = 'project/'+project.name+'/notes/'+todo.headline+'/'+(notes_num+1)+'.md';
+			
 
 			// showdown.js
 			var showdown = new Showdown.converter();
@@ -353,6 +363,7 @@ $(document).ready(function(){
 
 			//$('#tracker_notes_body').html(notes.body);
 			$('#tracker_notes_date').html(notes.date);
+			console.log(notes_body);
 			debug();
 		});
 
