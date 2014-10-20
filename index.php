@@ -22,8 +22,10 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/index.rework.css' />
+		<link rel='stylesheet' type='text/css' href='css/dropdown.css' />
 		<link rel='shortcut icon' href='res/pipe-blend.png' />
 		<script type='text/javascript' src='js/jquery1.js'></script>
+		<script type='text/javascript' src='js/showdown.js'></script>
 		<script type='text/javascript' src='js/globals.js'></script>
 		<script type='text/javascript' src='js/index.js'></script>
 		<script type='text/javascript' src='js/queued.js'></script>
@@ -54,8 +56,18 @@
 							<?php /*include 'php/queued.php';*/ ?>
 							<div id='tracker'>
 								<div id='tracker_header' class='border-box'>
-									<div id='tracker_header_name'>
-										<!-- project dropdown -->	
+									<div id='tracker_header_name' class='link link_button link_title'>
+										<span id='tracker_header_name_text'></span>
+										<span class="dropclick">&#9660;</span>
+										<!-- dropdown -->
+										<!--
+										<div class='link link_button'>
+											<div class='link_title'></div>
+											-->
+											<div>
+												<div class='link_drop'></div>
+											</div>
+										<!--</div>-->
 									</div>
 									<div id='tracker_header_id'></div>
 								</div>
@@ -65,8 +77,14 @@
 											<div id='tracker_documentation_collapse'>&#9650;</div>
 											<div id='tracker_documentation_expand'>&#9660;</div>
 											<div id='tracker_documentation_head'>
-												<div id='tracker_documentation_head_title'>Documentation</div>
-												<div id='tracker_documentation_head_type'>readme</div>
+												<div id='tracker_documentation_left'>
+													<div id='tracker_documentation_left_text'>&#9664;</div>
+												</div>
+												<div id='tracker_documentation_right'>
+													<div id='tracker_documentation_right_text'>&#9654;</div>
+												</div>
+												<div id='tracker_documentation_head_title'></div>
+												<div id='tracker_documentation_head_type'></div>
 											</div>
 											<div id='tracker_documentation_body'></div>
 											<div id='tracker_documentation_foot' class='border-box'>

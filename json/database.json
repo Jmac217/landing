@@ -5,82 +5,331 @@
 		"documentation":[{
 			"type":"readme",
 			"title":"Readme",
-			"body":"This project has been created in the purpose of giving easy access to database functionality.<br/><br/>The layout of this application is meant to be simple and easy to follow, even without documentation - which I will have a lot of.<br/><br/>The project started as a hard-coded printer database for my office, but quickly grew into an office-wide inventory system that could house any type of information.<br/>After setting up the back-end PHP and the HTML/JS structure I started seeing many places that could easily cater to any `category` that would be passed down the stream.<br/>Right now, since things have been hard-coded, you'll find many switch statements, and this is where development is currently being focused, that are progressively more functionalized - this is from testing things as I go down the line.<br/>In short: The last case in each switch statement is the most dynamic, though still incomplete.<br/>The current version is 2.0, version 1 was hard-coded for printers only. This version is still hard-coded, but with a little more room to work with and with all of the databases *we* need.<br/>Having said that: I plan on the finished project being totally polished and streamlined by v3.<br/><br/>There is a TODO outlining the kind-of-sort-of plans I have, and it's finally starting to take shape.<br/>I'm very excited about the implications of this project: giving non-technical users the ability to access databases and robust functionality in a simple, maintainable, a reliable point-and-click fashion.<br/><br/>Things have been scattered out everywhere, but this I'm this documentation is an attempt at taming the beast.<br/>Once this version is put into production notes will be made and changes can be added accordingly.<br/><br/>There is a list of bugs, though it's pretty lackluster.<br/>The only killer bug is that if there are empty databases, javascript doesn't know how to respond. Kind of an oversight since I never did have empty databases during the development of v2, just a heads-up and can (and might already) be fixed.<br/><br/>I intend on version 3 having some legit features including: users with settings and restrictions, customized categories, export/import/convert SQL/XML/JSON, Email alerts for certain variable values, stand-alone package for offline mode - Qt wrapper with JSON/XML database. I had thoughts about Active Directory integration, but Directory Wizzards (https://www.dirwiz.com/profiler/) seem to have that one figured out, so it's not pressing.<br/>",
-			"edited":"04-22-14",
-			"date":"08-13-13",
-			"author":"Jordan"
+			"body":"Readme",
+			"edited":"e1-e1-e1",
+			"date":"d1-d1-d1",
+			"author":"jordan"
 		},{
-			"type":"readme",
-			"title":"Readme 2",
-			"body":"Another readme",
-			"edited":"07-09-14",
-			"date":"07-09-14",
-			"author":"Jordan"
+			"type":"documentation",
+			"title":"Documentation",
+			"body":"Documentation",
+			"edited":"e2-e2-e2",
+			"date":"d2-d2-d2",
+			"author":"jordan"
 		}],
 		"todo":[{
 			"id":"1",
-			"headline":"Values are still sticky when selecting Add.",
-			"date":"04-22-14",
+			"headline":"todo",
+			"date":"11-11-11",
 			"notes":[{
-				"body":"To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. To change this, divs only need to be declared hidden when the view switches. ",
-				"date":"05-23-14"
+				"body":"1",
+				"date":"11-11-11"
+			},{
+				"body":"2",
+				"date":"12-12-12"
+			},{
+				"body":"3",
+				"date":"13-13-13"
+			},{
+				"body":"4",
+				"date":"14-14-14"
 			}],
 			"priority_index":[{
-				"type":"bug",
-				"workload":"light",
-				"importance":"minimal",
-				"due_date":"none"
+				"type":"1",
+				"workload":"1",
+				"importance":"1",
+				"due_date":"1"
 			}]
 		},{
 			"id":"2",
-			"headline":"The second change to be made",
-			"date":"04-22-14",
+			"headline":"bugs",
+			"date":"22-22-22",
 			"notes":[{
-				"body":"This is a really tough change to figure out.",
-				"date":"05-23-14"
+				"body":"1",
+				"date":"21-21-21"
 			},{
-				"body":"I can't figure it out!",
-				"date":"05-23-14"
+				"body":"2",
+				"date":"22-22-22"
 			},{
-				"body":"Okay I think I'm on to something...",
-				"date":"05-23-14"
+				"body":"3",
+				"date":"23-23-23"
 			},{
-				"body":"DONE That was actually super easy ._.",
-				"date":"05-23-14"
+				"body":"4",
+				"date":"24-24-24"
 			}],
 			"priority_index":[{
-				"type":"bug",
-				"workload":"heavy",
-				"importance":"medium",
-				"due_date":"none"
+				"type":"2",
+				"workload":"2",
+				"importance":"2",
+				"due_date":"2"
 			}]
 		},{
 			"id":"3",
-			"headline":"Realign some things",
-			"date":"04-22-14",
+			"headline":"todo-2",
+			"date":"33-33-33",
 			"notes":[{
-				"body":"this deals with css",
-				"date":"05-23-14"
+				"body":"1",
+				"date":"31-31-31"
+			},{
+				"body":"2",
+				"date":"32-32-32"
+			},{
+				"body":"3",
+				"date":"33-33-33"
+			},{
+				"body":"4",
+				"date":"34-34-34"
 			}],
 			"priority_index":[{
-				"type":"style",
-				"workload":"quick",
-				"importance":"minimal",
-				"due_date":"none"
+				"type":"3",
+				"workload":"3",
+				"importance":"3",
+				"due_date":"3"
 			}]
 		},{
 			"id":"4",
-			"headline":"Add button to view field",
-			"date":"04-22-14",
+			"headline":"bugs-2",
+			"date":"44-44-44",
 			"notes":[{
-				"body":"realign css and create new button with functions",
-				"date":"05-23-14"
+				"body":"1",
+				"date":"41-41-41"
+			},{
+				"body":"2",
+				"date":"42-42-42"
+			},{
+				"body":"3",
+				"date":"43-43-43"
+			},{
+				"body":"4",
+				"date":"44-44-44"
 			}],
 			"priority_index":[{
-				"type":"feature",
-				"workload":"medium",
-				"importance":"medium",
-				"due_date":"soon"
+				"type":"4",
+				"workload":"4",
+				"importance":"4",
+				"due_date":"4"
+			}]
+		}]
+	},{
+		"id":"2",
+		"name":"Landing",
+		"documentation":[{
+			"type":"2doc1",
+			"title":"2Doc1",
+			"body":"1:1",
+			"edited":"e1-e1-e1",
+			"date":"d1-d1-d1",
+			"author":"jordan"
+		},{
+			"type":"2doc2",
+			"title":"2Doc2",
+			"body":"1:2",
+			"edited":"e2-e2-e2",
+			"date":"d2-d2-d2",
+			"author":"jordan"
+		}],
+		"todo":[{
+			"id":"2-1",
+			"headline":"2-1",
+			"date":"11-11-11",
+			"notes":[{
+				"body":"1:1",
+				"date":"11-11-11"
+			},{
+				"body":"1:2",
+				"date":"12-12-12"
+			},{
+				"body":"1:3",
+				"date":"13-13-13"
+			},{
+				"body":"1:4",
+				"date":"14-14-14"
+			}],
+			"priority_index":[{
+				"type":"1",
+				"workload":"1",
+				"importance":"1",
+				"due_date":"1"
+			}]
+		},{
+			"id":"2-2",
+			"headline":"2-2",
+			"date":"22-22-22",
+			"notes":[{
+				"body":"2:1",
+				"date":"21-21-21"
+			},{
+				"body":"2:2",
+				"date":"22-22-22"
+			},{
+				"body":"2:3",
+				"date":"23-23-23"
+			},{
+				"body":"2:4",
+				"date":"24-24-24"
+			}],
+			"priority_index":[{
+				"type":"2",
+				"workload":"2",
+				"importance":"2",
+				"due_date":"2"
+			}]
+		},{
+			"id":"2-3",
+			"headline":"2-3",
+			"date":"33-33-33",
+			"notes":[{
+				"body":"3:1",
+				"date":"31-31-31"
+			},{
+				"body":"3:2",
+				"date":"32-32-32"
+			},{
+				"body":"3:3",
+				"date":"33-33-33"
+			},{
+				"body":"3:4",
+				"date":"34-34-34"
+			}],
+			"priority_index":[{
+				"type":"3",
+				"workload":"3",
+				"importance":"3",
+				"due_date":"3"
+			}]
+		},{
+			"id":"2-4",
+			"headline":"2-4",
+			"date":"44-44-44",
+			"notes":[{
+				"body":"4:1",
+				"date":"41-41-41"
+			},{
+				"body":"4:2",
+				"date":"42-42-42"
+			},{
+				"body":"4:3",
+				"date":"43-43-43"
+			},{
+				"body":"4:4",
+				"date":"44-44-44"
+			}],
+			"priority_index":[{
+				"type":"4",
+				"workload":"4",
+				"importance":"4",
+				"due_date":"4"
+			}]
+		}]
+	},{
+		"id":"3",
+		"name":"FJC-IL",
+		"documentation":[{
+			"type":"doc1",
+			"title":"Doc1",
+			"body":"1:1",
+			"edited":"e1-e1-e1",
+			"date":"d1-d1-d1",
+			"author":"jordan"
+		},{
+			"type":"doc2",
+			"title":"Doc2",
+			"body":"1:2",
+			"edited":"e2-e2-e2",
+			"date":"d2-d2-d2",
+			"author":"jordan"
+		}],
+		"todo":[{
+			"id":"10",
+			"headline":"HEADLINE",
+			"date":"11-11-11",
+			"notes":[{
+				"body":"1:1",
+				"date":"11-11-11"
+			},{
+				"body":"1:2",
+				"date":"12-12-12"
+			},{
+				"body":"1:3",
+				"date":"13-13-13"
+			},{
+				"body":"1:4",
+				"date":"14-14-14"
+			}],
+			"priority_index":[{
+				"type":"1",
+				"workload":"1",
+				"importance":"1",
+				"due_date":"1"
+			}]
+		},{
+			"id":"2",
+			"headline":"2",
+			"date":"22-22-22",
+			"notes":[{
+				"body":"2:1",
+				"date":"21-21-21"
+			},{
+				"body":"2:2",
+				"date":"22-22-22"
+			},{
+				"body":"2:3",
+				"date":"23-23-23"
+			},{
+				"body":"2:4",
+				"date":"24-24-24"
+			}],
+			"priority_index":[{
+				"type":"2",
+				"workload":"2",
+				"importance":"2",
+				"due_date":"2"
+			}]
+		},{
+			"id":"3",
+			"headline":"3",
+			"date":"33-33-33",
+			"notes":[{
+				"body":"3:1",
+				"date":"31-31-31"
+			},{
+				"body":"3:2",
+				"date":"32-32-32"
+			},{
+				"body":"3:3",
+				"date":"33-33-33"
+			},{
+				"body":"3:4",
+				"date":"34-34-34"
+			}],
+			"priority_index":[{
+				"type":"3",
+				"workload":"3",
+				"importance":"3",
+				"due_date":"3"
+			}]
+		},{
+			"id":"4",
+			"headline":"4",
+			"date":"44-44-44",
+			"notes":[{
+				"body":"4:1",
+				"date":"41-41-41"
+			},{
+				"body":"4:2",
+				"date":"42-42-42"
+			},{
+				"body":"4:3",
+				"date":"43-43-43"
+			},{
+				"body":"4:4",
+				"date":"44-44-44"
+			}],
+			"priority_index":[{
+				"type":"4",
+				"workload":"4",
+				"importance":"4",
+				"due_date":"4"
 			}]
 		}]
 	}]

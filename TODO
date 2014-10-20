@@ -1,14 +1,12 @@
 ## Meta
 
 	DON'T DELETE index.css or index.php, they contain the global header/footer
+	-- They're being depricated now anyway, but still--the code will matter
 
 	* Knockout.JS will be added to remove, at least most of the, jQuery CSS calls.
 		- data-bindings will allow for much more responsive associations for both these CSS calls and JSON value tracking.
 		- editing markdown files in-line would be a very nice feature to experiment with too while implementing this library.
 
-	* Larger #doc/#view window?
-		> When designing the page, it wasn't intended to be fancy; it was certainly not designed to be an all-encompassing workflow management solution. The queue view was added ad-hoc, and built inside of the limited space, which has been mostly good, but also limiting.
-		
 
 ## user_panel
 

@@ -26,6 +26,10 @@
 			"name":"CustomersDB",
 			"href":"/customer/",
 			"type":"link"
+		},{
+			"name":"FJC-IL",
+			"href":"/fjc-il_rework/",
+			"type":"link"
 		}]
 	},
 	"modules":{
