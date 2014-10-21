@@ -6,6 +6,8 @@
 	* Knockout.JS will be added to remove, at least most of the, jQuery CSS calls.
 		- data-bindings will allow for much more responsive associations for both these CSS calls and JSON value tracking.
 		- editing markdown files in-line would be a very nice feature to experiment with too while implementing this library.
+		
+	The Javascript seems to be coupled to the global directory path
 
 
 ## user_panel
