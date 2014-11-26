@@ -4,31 +4,31 @@
 		"action":"list",
 		"urls":[{
 			"name":"Inventory",
-			"href":"/pages/inventory/",
+			"href":"/site/inventory/",
 			"type":"link"
 		},{
 			"name":"MLT",
-			"href":"/pages/mlt/",
+			"href":"/sites/mlt/",
 			"type":"link"
 		},{
 			"name":"TBOC",
-			"href":"/pages/tboc/",
+			"href":"/sites/tboc/",
 			"type":"link"
 		},{
 			"name":"Codefront",
-			"href":"/pages/codefront/",
+			"href":"/sites/codefront/",
 			"type":"link"
 		},{
 			"name":"Jmac217.net",
-			"href":"/pages/jmac217.net/",
+			"href":"/sites/jmac217.net/",
 			"type":"link"
 		},{
 			"name":"CustomersDB",
-			"href":"/pages/customer/",
+			"href":"/sites/customer/",
 			"type":"link"
 		},{
 			"name":"FJC-IL",
-			"href":"/pages/fjc-il_rework/",
+			"href":"/sites/fjc-il_rework/",
 			"type":"link"
 		}]
 	},
