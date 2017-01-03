@@ -1,13 +1,13 @@
 # Landing Zone
-## Aims to be
+### Aims to be
 * an all-inclusive management system for development projects and organize projects
 * centralized web-based work environment
 * generate and track bugs, notes, and documents for projects.
 
-This project is heavily outdated in places.  
+### This project is heavily outdated in places.  
 It will soon grow into the culmination of my entire work and home page for all future development.  
 
-#### This project consists of many parts
+#### This project consists of three main parts
 * Single Page Application
 * JSON MVC
 * Custom Modules
